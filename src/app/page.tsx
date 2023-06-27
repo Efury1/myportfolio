@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import Head from "next/head";
 import {AiFillLinkedin, AiFillYoutube}  from "react-icons/ai";
-import { FaMedium } from "react-icons/fa";
+import { FaGithubAlt, FaMedium } from "react-icons/fa";
 import eliza from "./eliza.jpeg"
 
 export default function Home() {
@@ -26,6 +26,7 @@ export default function Home() {
         </div>
         <div className="text-5xl flex justify-center gap-16 py-3 text-gray-400">
         <a href='https://www.linkedin.com/in/eliza-fury-3004b3110/'><button><AiFillLinkedin></AiFillLinkedin></button></a>
+        <a href='https://medium.com/@ejfury'><button><FaGithubAlt></FaGithubAlt></button></a>
         <a href='https://www.youtube.com/channel/UCCwlIqh6VjXceir9BHMl_YQ'><button><AiFillYoutube></AiFillYoutube></button></a>
         <a href='https://medium.com/@ejfury'><button><FaMedium></FaMedium></button></a>
         </div>
