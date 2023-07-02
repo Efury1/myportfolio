@@ -1,4 +1,13 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+## Github Portfolio
+
+This is my portfolio website built using the Tailwind CSS framework deployed in Netlify. This portfolio serves as a way to link all my career related social media sites.
+
+## Features
+* Social media icons for easy access to social profiles
+* Blocks to break down text
+
+![Portfolio homepage](/PortfolioImg1.png "Portfolio Image")
+
 
 ## Getting Started
 
@@ -12,24 +21,13 @@ yarn dev
 pnpm dev
 ```
 
+## Portfolio Image
+
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Deployment
+This project is deployed on Netlify. Any changes made in the master branch of the repository will automatically trigger anew build and deployment.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
-# myportfolio
+## Acknowledgements
+* The Tailwind CSS community for creating an amazing CSS framework
+* Netlify for providing seamless deployment options
