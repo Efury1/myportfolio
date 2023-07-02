@@ -25,7 +25,6 @@ export default function Home() {
         </p>
         </div>
         <div className="text-5xl flex justify-center gap-16 py-3 text-black-400">
-        <a href='https://www.linkedin.com/in/eliza-fury-3004b3110/'><button><AiFillLinkedin></AiFillLinkedin></button></a>
         <a href='https://github.com/Efury1?tab=overview&from=2023-06-01&to=2023-06-27'><button><FaGithubAlt></FaGithubAlt></button></a>
         <a href='https://www.youtube.com/channel/UCCwlIqh6VjXceir9BHMl_YQ'><button><AiFillYoutube></AiFillYoutube></button></a>
         <a href='https://medium.com/@ejfury'><button><FaMedium></FaMedium></button></a>
