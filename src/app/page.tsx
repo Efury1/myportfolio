@@ -11,7 +11,7 @@ export default function Home() {
           <h1 className="text-xl ">Eliza Fury</h1>
           <ul className="flex items-center">
             <li></li>
-            <li><a className="bg-gradient-to-r from-blue-500 to-purple-500 text-white px-4 rounded-md ml-8" href="https://www.linkedin.com/in/eliza-fury-3004b3110/">Resume</a></li>
+            <li><a className="bg-gradient-to-r from-blue-500 to-purple-500 text-white px-4 rounded-md ml-8" href="https://www.linkedin.com/in/eliza-fury-3004b3110/">My Feed</a></li>
           </ul>
         </nav>
         <section>
