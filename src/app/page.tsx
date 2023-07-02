@@ -35,7 +35,23 @@ export default function Home() {
         </div>
         </section>
         <section>
-    
+        <div className="text-center p-10">
+              <h3 className="text-3xl flex justify-center gap-16 py-10">My Skills</h3>
+              <p className="text-md justify-center py-2 leading-8 text-white-800">
+                As a frontend developer, I have knowledge of: <h4 className="py-2 text-teal-600">HTML, CSS and  Javascript</h4> 
+                <h4 className="py-2 text-teal-600">Tailwind CSS</h4> 
+                <h4 className="py-2 text-teal-600">Responsive Web Design</h4> 
+                <h4 className="py-2 text-teal-600">Version Control </h4>
+                <h4 className="py-2 text-teal-600">Various Javascript Frameworks and Libraries.</h4> 
+              </p>
+          <div>
+          <p className="text-md justify-center py-2 leading-8 text-white-800">
+              With a design background, as a developer, I possess the ability to think in terms of design theory and use applications such as:
+            <h4 className="py-2 text-teal-600">Illustrator</h4>
+            <h4 className=" text-teal-600">Photoshop</h4>
+            </p>
+          </div>
+          </div>
         </section>
     </main>
   )
