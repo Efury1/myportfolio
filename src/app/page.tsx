@@ -11,12 +11,12 @@ export default function Home() {
           <h1 className="text-xl ">Eliza Fury</h1>
           <ul className="flex items-center">
             <li></li>
-            <li><a className="bg-gradient-to-r from-blue-500 to-purple-500 text-white px-4 rounded-md ml-8" href="https://www.linkedin.com/in/eliza-fury-3004b3110/">My Feed</a></li>
+            <li><a className="bg-gradient-to-r from-blue-500 to-purple-500 text-white px-4 rounded-md ml-8" href="https://www.linkedin.com/in/eliza-fury-3004b3110/">My Resume</a></li>
           </ul>
         </nav>
         <section>
         <div className="text-center p-10">
-          <h1 className="text-5xl py-2 text-teal-600 font-medium">Eliza Fury</h1>
+          <h1 className="text-5xl py-2 text-blue-600 font-medium">Eliza Fury</h1>
           <h3 className="text-2xl py-2">Developer and designer</h3>
         <p className="text-md py-5 leading-8 text-white-800">
         Passionate developer with a data-driven approach, prioritizing accessibility and inclusivity. 
@@ -36,19 +36,24 @@ export default function Home() {
         </section>
         <section>
         <div className="text-center p-10">
-              <h3 className="text-3xl flex justify-center gap-16 py-10">My Skills</h3>
-              <p className="text-md justify-center py-2 leading-8 text-white-800">
-                As a frontend developer, I have knowledge of: <h4 className="py-2 text-teal-600">HTML, CSS and  Javascript</h4> 
+        <div className="text-center shallow-lg bg-white pd-5 rounded-xl my-5">
+              <h3 className="text-3xl flex justify-center gap-1 py-1">My Skills</h3>
+              <p className="text-md justify-center py-1 leading-8 text-white-800">
+              <h3 className="text-2xl py-1 text-black">Development</h3>
+              <p className="text-black">As a frontend developer, I have knowledge of: </p>
+                <h4 className="py-2 text-teal-600">HTML, CSS and  Javascript</h4> 
                 <h4 className="py-2 text-teal-600">Tailwind CSS</h4> 
                 <h4 className="py-2 text-teal-600">Responsive Web Design</h4> 
                 <h4 className="py-2 text-teal-600">Version Control </h4>
                 <h4 className="py-2 text-teal-600">Various Javascript Frameworks and Libraries.</h4> 
               </p>
-          <div>
-          <p className="text-md justify-center py-2 leading-8 text-white-800">
-              With a design background, as a developer, I possess the ability to think in terms of design theory and use applications such as:
-            <h4 className="py-2 text-teal-600">Illustrator</h4>
-            <h4 className=" text-teal-600">Photoshop</h4>
+          </div>
+          <div className="text-center shallow-lg bg-white pd-5 rounded-xl my-5">
+          <p className="text-md justify-center pt-8 pb-2 leading-8 text-white-800">
+              <h3 className="text-2xl font-medium py-4 text-black">Design</h3>
+              <p className="text-black">With a design background, as a developer, <br/>I possess the ability to think in terms of design theory and use the following tools:</p>
+              <p className="py-2 text-teal-600">Illustrator</p>
+              <p className=" text-teal-600">Photoshop</p>
             </p>
           </div>
           </div>
