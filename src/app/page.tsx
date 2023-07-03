@@ -11,12 +11,13 @@ export default function Home() {
           <h1 className="text-xl">Eliza Fury</h1>
           <ul className="flex items-center">
             <li></li>
-            <li><a className="bg-gradient-to-r from-blue to-purple text-white px-4 rounded-md ml-8" href="https://www.linkedin.com/in/eliza-fury-3004b3110/">My Resume</a></li>
+            <li><a className="bg-pink text-black px-4 rounded-md ml-8" href="https://www.linkedin.com/in/eliza-fury-3004b3110/">My Resume</a></li>
           </ul>
         </nav>
         <section>
         <div className="text-center p-10">
-          <h1 className="text-5xl py-2 text-pink font-medium">Eliza Fury</h1>
+          <p className="before:block before:absolute before:-inset-1 before:-skew-y-3 before:bg-pink-500 relative inline-block bg-pink">
+          <h1 className="text-5xl py-2 text-white font-medium">Eliza Fury</h1></p>
           <h3 className="text-2xl py-2">Developer and designer</h3>
         <p className="text-md py-5 leading-8 text-white-800">
         Passionate developer with a data-driven approach, prioritizing accessibility and inclusivity. 
