@@ -35,28 +35,26 @@ export default function Home() {
         </div>
         </section>
         <section>
-        <div className="text-center p-10">
-
-        <div className="group block max-w-xs mx-auto rounded-lg p-6 bg-white ring-1 ring-slate-900/5 shadow-lg space-y-3 hover:bg-sky-500 hover:ring-sky-500 pd-5 my-5">
-              <h3 className="text-3xl flex justify-center gap-1 py-1">My Skills</h3>
-              <h3 className="text-2xl py-1 text-pink">Development</h3>
-              <p className="text-black">As a frontend developer, I have knowledge of: </p>
-                <h4 className="py-2 text-blue">HTML, CSS and  Javascript</h4> 
-                <h4 className="py-2 text-blue">Tailwind CSS</h4> 
-                <h4 className="py-2 text-blue">Responsive Web Design</h4> 
-                <h4 className="py-2 text-blue">Version Control </h4>
-                <h4 className="py-2 text-blue">Various Javascript Frameworks and Libraries.</h4> 
-          </div>
-
+        <div className="columns-2 md:columns-2 grid grid-cols-2 ">
           <div className="group block max-w-xs mx-auto rounded-lg p-6 bg-white ring-1 ring-slate-900/5 shadow-lg space-y-3 hover:bg-sky-500 hover:ring-sky-500 pd-5 my-5">
-            <p className="text-md justify-center pt-8 pb-2 leading-8 text-white-800">
-                <h3 className="text-2xl font-medium py-4 text-pink">Design</h3>
-                <p className="text-black">With a design background, as a developer, <br/>I possess the ability to think in terms of design theory and use the following tools:</p>
-                <p className="py-2 text-blue">Illustrator</p>
-                <p className=" text-blue">Photoshop</p>
-            </p>
-          </div>
+                <h3 className="text-3xl flex justify-center gap-1 py-1">My Skills</h3>
+                <h3 className="text-2xl py-1 text-pink">Development</h3>
+                <p className="text-black">As a frontend developer, I have knowledge of: </p>
+                  <h4 className="py-2 text-blue">HTML, CSS and  Javascript</h4> 
+                  <h4 className="py-2 text-blue">Tailwind CSS</h4> 
+                  <h4 className="py-2 text-blue">Responsive Web Design</h4> 
+                  <h4 className="py-2 text-blue">Version Control </h4>
+                  <h4 className="py-2 text-blue">Various Javascript Frameworks and Libraries.</h4> 
+            </div>
 
+            <div className="group block max-w-xs mx-auto rounded-lg p-6 bg-white ring-1 ring-slate-900/5 shadow-lg space-y-3 hover:bg-sky-500 hover:ring-sky-500 pd-5 my-5">
+              <p className="text-md justify-center pt-8 pb-2 leading-8 text-white-800">
+                  <h3 className="text-2xl font-medium py-4 text-pink">Design</h3>
+                  <p className="text-black">With a design background, as a developer, <br/>I possess the ability to think in terms of design theory and use the following tools:</p>
+                  <p className="py-2 text-blue">Illustrator</p>
+                  <p className=" text-blue">Photoshop</p>
+              </p>
+            </div>
           </div>
         </section>
     </main>
