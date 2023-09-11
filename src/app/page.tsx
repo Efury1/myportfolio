@@ -35,8 +35,8 @@ export default function Home() {
           </div>
           </section>
         <section>
-        <div className="columns-3 md:columns-3 grid grid-cols-3 ">
-          <div className="group block max-w-xs mx-auto rounded-lg p-6 bg-white ring-1 ring-slate-900/5 shadow-lg space-y-3 hover:bg-sky-500 hover:ring-sky-500 pd-5 my-5">
+        <div className="columns-1 md:columns-1 grid grid-cols-1 sm:grid-cols-3">
+          <div className="group block max-w-xs mx-auto rounded-lg p-6 bg-white ring-1 ring-slate-900/5 shadow-lg space-y-3 hover:bg-sky-500 hover:ring-sky-500 pd-5 my-5  ">
                 <h3 className="text-2xl py-1 text-pink">Development</h3>
                 <p className="text-black">As a frontend developer, I have knowledge of: </p>
                   <h4 className="py-2 text-blue">HTML, CSS and  Javascript</h4> 
