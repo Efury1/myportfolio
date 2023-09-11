@@ -1,5 +1,6 @@
 const colors = require('tailwindcss/colors')
 /** @type {import('tailwindcss').Config} */
+
 module.exports = {
   content: [
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
@@ -21,14 +22,6 @@ module.exports = {
       'denim':'#0E64C6ff',
       'pink-lavender': '#DBAFD3ff',
       'true-blue': '#4C6E9Bff',
-    },
-    fontFamily: {
-      sans: ['Graphik', 'sans-serif'],
-      serif: ['Merriweather', 'serif'],
-    },
-    fontFamily: {
-      sans: ['Graphik', 'sans-serif'],
-      serif: ['Merriweather', 'serif'],
     },
     extend: {},
   },
