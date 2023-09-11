@@ -19,10 +19,9 @@ export default function Home() {
             <p className="before:block before:absolute before:-inset-1 before:-skew-y-3 before:bg-pink-500 relative inline-block bg-pink">
             <h1 className="text-5xl py-2 text-white font-medium"> Eliza Fury</h1></p>
             <h3 className="text-2xl py-2">Developer and designer</h3>
-              <p className="text-md py-5 leading-8 text-white-800">
-              Passionate developer with a data-driven approach, prioritizing accessibility and inclusivity. 
-              Blend of creativity and technical expertise from an advanced diploma in fashion and technology. 
-              Committed to user empathy and creating seamless experiences.
+              <p className="text-md py-51 leading-8 text-white-800" > Eliza Fury is a web developer, writer and designer based in Australia. 
+              Eliza has a vibrant personality filled with a passion for data-driven approaches, accessibility and inclusivity. 
+              She has a blend of creativity and technical expertise from an advanced diploma in fashion and technology and a bachelors in computer science. 
               </p>
           </div>
           <div className="text-5xl flex justify-center gap-16 py-3 text-black-400">
@@ -38,7 +37,7 @@ export default function Home() {
         <div className="columns-1 md:columns-1 grid grid-cols-1 sm:grid-cols-3">
           <div className="group block max-w-xs mx-auto rounded-lg p-6 bg-white ring-1 ring-slate-900/5 shadow-lg space-y-3 hover:bg-sky-500 hover:ring-sky-500 pd-5 my-5  ">
                 <h3 className="text-2xl py-1 text-pink">Development</h3>
-                <p className="text-black">As a frontend developer, I have knowledge of: </p>
+                <p className="text-denim">As a frontend developer, I have knowledge of: </p>
                   <h4 className="py-2 text-blue">HTML, CSS and  Javascript</h4> 
                   <h4 className="py-2 text-blue">Tailwind CSS</h4> 
                   <h4 className="py-2 text-blue">Responsive Web Design</h4> 
@@ -49,7 +48,7 @@ export default function Home() {
             <div className="group block max-w-xs mx-auto rounded-lg p-6 bg-white ring-1 ring-slate-900/5 shadow-lg space-y-3 hover:bg-sky-500 hover:ring-sky-500 pd-5 my-5">
               <p className="text-md justify-center pt-8 pb-2 leading-8 text-white-800">
                   <h3 className="text-2xl font-medium py-4 text-pink">Design</h3>
-                  <p className="text-black">With a design background, as a developer, <br/>I possess the ability to think in terms of design theory and use the following tools:</p>
+                  <p className="text-denim">With a design background, as a developer, <br/>I possess the ability to think in terms of design theory and use the following tools:</p>
                   <p className="py-2 text-blue">Illustrator</p>
                   <p className=" text-blue">Photoshop</p>
               </p>
@@ -57,7 +56,7 @@ export default function Home() {
 
             <div className="group block max-w-xs mx-auto rounded-lg p-6 bg-white ring-1 ring-slate-900/5 shadow-lg space-y-3 hover:bg-sky-500 hover:ring-sky-500 pd-5 my-5">
                 <h3 className="text-2xl py-1 text-pink">Analytics</h3>
-                <p className="text-black">This involves: </p>
+                <p className="text-denim">This involves: </p>
                   <h4 className="py-2 text-blue">Data Visualisation</h4> 
                   <h4 className="py-2 text-blue">Ability to Anaylse business practices and system functionality</h4> 
                   <h4 className="py-2 text-blue">Make data-driven decisions</h4> 
