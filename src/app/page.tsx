@@ -2,7 +2,7 @@ import Image from 'next/image'
 import Head from "next/head";
 import {AiFillLinkedin, AiFillYoutube}  from "react-icons/ai";
 import { FaGithubAlt, FaMedium } from "react-icons/fa";
-import eliza from "./eliza.png"
+import eliza from "./eliza1.png"
 
 export default function Home() {
   return (
@@ -10,7 +10,6 @@ export default function Home() {
         <nav className="py-10 mb-12 flex justify-between">
           <h1 className="text-xl">Eliza Fury</h1>
           <ul className="flex items-center">
-            <li></li>
             <li><a className="bg-white hover:bg-pink hover:text-white text-blue font-semibold py-2 px-1 border border-gray-200 rounded shadow" href="https://www.linkedin.com/in/eliza-fury-3004b3110/">My Resume</a></li>
           </ul>
         </nav>
