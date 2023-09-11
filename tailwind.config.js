@@ -22,6 +22,14 @@ module.exports = {
       'pink-lavender': '#DBAFD3ff',
       'true-blue': '#4C6E9Bff',
     },
+    fontFamily: {
+      sans: ['Graphik', 'sans-serif'],
+      serif: ['Merriweather', 'serif'],
+    },
+    fontFamily: {
+      sans: ['Graphik', 'sans-serif'],
+      serif: ['Merriweather', 'serif'],
+    },
     extend: {},
   },
   plugins: [],
