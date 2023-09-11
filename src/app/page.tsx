@@ -2,7 +2,7 @@ import Image from 'next/image'
 import Head from "next/head";
 import {AiFillLinkedin, AiFillYoutube}  from "react-icons/ai";
 import { FaGithubAlt, FaMedium } from "react-icons/fa";
-import eliza from "./eliza.jpeg"
+import eliza from "./eliza.png"
 
 export default function Home() {
   return (
@@ -29,7 +29,7 @@ export default function Home() {
             <a href='https://www.youtube.com/channel/UCCwlIqh6VjXceir9BHMl_YQ'><button><AiFillYoutube></AiFillYoutube></button></a>
             <a href='https://medium.com/@ejfury'><button><FaMedium></FaMedium></button></a>
           </div>
-          <div className="relative mx-auto bg-gradient-to-b from-teal-500 rounded-full w-80 h-80 mt-20 overflow-hidden ">
+          <div className="relative mx-auto rounded-full w-80 h-100 mt-100 overflow-hidden ">
             <Image src={eliza} alt="Eliza Fury" />
           </div>
           </section>
