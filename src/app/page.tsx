@@ -65,7 +65,7 @@ export default function Home() {
           </div>
         </section>
         
-        <section>
+        <section className="text-center p-10">
           <h3 className="text-2xl py-2 text-center mx-px=12">Projects</h3>
           <div className="py-10 mb-12 flex justify-between">
           <p className="text-md py-51 leading-8 text-white-800 text-center">Eliza is a coding enthusiast with a passion for turning everyday hobbies into exciting digital adventures! 
