@@ -10,7 +10,7 @@ export default function Home() {
         <nav className="py-10 mb-12 flex justify-between">
           <h1 className="text-xl font-poppins">Eliza Fury</h1>
           <ul className="flex items-center">
-            <li><a className="bg-white hover:bg-pink hover:text-white text-blue font-semibold py-2 px-1 border border-lavender-pink-200 rounded shadow" href="https://www.linkedin.com/in/eliza-fury-3004b3110/">My Resume</a></li>
+            <li><a className="bg-white hover:bg-pink hover:text-white text-blue font-semibold py-2 px-1 border border-lavender-pink-200 rounded shadow" target="_blank"  rel="noopener noreferrer" href="https://www.linkedin.com/in/eliza-fury-3004b3110/" >My Resume</a></li>
           </ul>
         </nav>
         <section>
