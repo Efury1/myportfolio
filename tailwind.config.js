@@ -23,7 +23,11 @@ module.exports = {
       'pink-lavender': '#DBAFD3ff',
       'true-blue': '#4C6E9Bff',
     },
-    extend: {},
+    extend: {
+      spacing: {
+        '5px': '5px',
+      }
+    },
   },
   plugins: [],
 }
