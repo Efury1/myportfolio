@@ -73,20 +73,20 @@ export default function Home() {
             But when the clock strikes 5, it's time to unleash the creativity.
           </p>
           </div>
-          <div className="columns-1 md:columns-1 grid grid-cols-1 sm:grid-cols-3 ">
-            <div className="max-w-xs mx-auto ring-1 border border-sky-10 space-x-3 mb-12">
+          <div className="columns-1 md:columns-1 grid grid-cols-1 sm:grid-cols-3">
+            <div className="max-w-xs mx-auto ring-1 border border-sky-10 space-x-3 mb-12 rounded-lg p-6 rotate-45">
               <div className="text-center">Animal Crossing To Do List</div>
               <div>
                 <Image src={animalcrossing} alt="Animal Crossing" />
               </div>
             </div>
 
-            <div className="max-w-xs mx-auto ring-1 border border-sky-10 space-x-3 mb-12 ">
+            <div className="max-w-xs mx-auto ring-1 border border-sky-10 space-x-3 mb-12 rounded-lg p-6">
               <div className="text-center">Simpsons Quote App</div>
               <div><Image src={thesimpsons} alt="The Simpsons" /></div>
             </div>
 
-            <div className="max-w-xs mx-auto ring-1 border border-sky-10 space-x-3 mb-12 ">
+            <div className="max-w-xs mx-auto ring-1 border border-sky-10 space-x-3 mb-12 rounded-lg p-6 scale-75 translate-x-4 skew-y-3 ">
               <div className="text-center">Rich and Morty Quiz App</div>
               <div><Image src={rickandmorty} alt="Rick and Morty" /></div>
             </div>
