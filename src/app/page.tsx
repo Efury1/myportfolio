@@ -7,6 +7,8 @@ import rickandmorty from "./rickandmorty.png";
 import thesimpsons from "./thesimpsons.png";
 import animalcrossing from "./animalcrossing.png";
 import "./globals.css";
+import { Link } from 'react-router-dom';
+
 import {
   Inter as Sans,
   Bitter as Serif,
@@ -136,7 +138,7 @@ export default function Home() {
                 <span className="block uppercase text-sm font-semibold mb-2 text-right lg:text-right text-white">Other pages</span>
                 <ul className="list-unstyled">
                   <li>
-                    <a href="page2.tsx" className="font-semibold block pb-2 text-sm text-right lg:text-right text-white">Coming soon</a>
+                    <a className="block uppercase text-sm font-semibold mb-2 text-right lg:text-right text-white">comign</a>
                   </li>
                 </ul>
                 </div>
