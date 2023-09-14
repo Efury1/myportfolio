@@ -7,7 +7,9 @@ import rickandmorty from "./rickandmorty.png";
 import thesimpsons from "./thesimpsons.png";
 import animalcrossing from "./animalcrossing.png";
 import "./globals.css";
-import { Link } from 'react-router-dom';
+import * as React from 'react';
+import Link from 'next/link';
+
 
 import {
   Inter as Sans,
@@ -137,9 +139,11 @@ export default function Home() {
                 <div className="w-full lg:w-4/12 px-4 ml-auto">
                 <span className="block uppercase text-sm font-semibold mb-2 text-right lg:text-right text-white">Other pages</span>
                 <ul className="list-unstyled">
-                  <li>
-                    <a className="block uppercase text-sm font-semibold mb-2 text-right lg:text-right text-white">comign</a>
-                  </li>
+
+                  <Link href="/page2" className="block uppercase text-sm font-semibold mb-2 text-right lg:text-right text-white">
+                      Coming soon
+                  </Link>
+               
                 </ul>
                 </div>
               </div>
