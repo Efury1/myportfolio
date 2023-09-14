@@ -6,13 +6,34 @@ import eliza from "./eliza2.png";
 import rickandmorty from "./rickandmorty.png";
 import thesimpsons from "./thesimpsons.png";
 import animalcrossing from "./animalcrossing.png";
+import "./globals.css";
+import {
+  Inter as Sans,
+  Bitter as Serif,
+  Fira_Code as Mono,
+} from '@next/font/google';
+
+const sans = Sans({
+  subsets: ['latin'],
+  // this will be the css variable
+  variable: '--font-sans',
+});
+
+const serif = Serif({
+  subsets: ['latin'],
+  variable: '--font-serif',
+});
+const mono = Mono({
+  subsets: ['latin'],
+  variable: '--font-mono',
+});
 
 
 export default function Home() {
   return (
     <main>
         <nav className="py-10 mb-12 flex justify-between">
-          <h1 className="text-xl">Eliza Fury</h1>
+          <h1 className="font-serif text-xl">Eliza Fury</h1>
           <ul className="flex items-center">
             <li><a className="bg-white hover:bg-pink hover:text-white text-blue font-semibold py-2 px-1 border border-lavender-pink-200 rounded shadow" target="_blank"  rel="noopener noreferrer" href="https://www.linkedin.com/in/eliza-fury-3004b3110/" >My Resume</a></li>
           </ul>
@@ -74,19 +95,19 @@ export default function Home() {
           </p>
           </div>
           <div className="columns-1 md:columns-1 grid grid-cols-1 sm:grid-cols-3">
-            <div className="max-w-xs mx-auto ring-1 border border-sky-10 space-x-3 mb-12 rounded-lg p-6 rotate-45">
+            <div className="max-w-xs mx-auto ring-1 border border-sky-10 space-x-3 mb-12 rounded-lg p-65 hover:-translate-y-1 hover:scale-110 hover:bg-indigo-500 duration-300s">
               <div className="text-center">Animal Crossing To Do List</div>
               <div>
                 <Image src={animalcrossing} alt="Animal Crossing" />
               </div>
             </div>
 
-            <div className="max-w-xs mx-auto ring-1 border border-sky-10 space-x-3 mb-12 rounded-lg p-6">
+            <div className="max-w-xs mx-auto ring-1 border border-sky-10 space-x-3 mb-12 rounded-lg p-6 hover:-translate-y-1 hover:scale-110 hover:bg-indigo-500 duration-300">
               <div className="text-center">Simpsons Quote App</div>
               <div><Image src={thesimpsons} alt="The Simpsons" /></div>
             </div>
 
-            <div className="max-w-xs mx-auto ring-1 border border-sky-10 space-x-3 mb-12 rounded-lg p-6 scale-75 translate-x-4 skew-y-3 ">
+            <div className="max-w-xs mx-auto ring-1 border border-sky-10 space-x-3 mb-12 rounded-lg p-6 hover:-translate-y-1 hover:scale-110 hover:bg-indigo-500 duration-300">
               <div className="text-center">Rich and Morty Quiz App</div>
               <div><Image src={rickandmorty} alt="Rick and Morty" /></div>
             </div>
