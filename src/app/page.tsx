@@ -2,7 +2,7 @@ import Image from 'next/image';
 import Head from 'next/head';
 import { AiFillLinkedin, AiFillYoutube } from 'react-icons/ai';
 import { FaGithubAlt, FaMedium } from 'react-icons/fa';
-import eliza from './eliza2.png';
+import eliza from './eliza1.png';
 import rickandmorty from './rickandmorty.png';
 import thesimpsons from './thesimpsons.png';
 import animalcrossing from './animalcrossing.png';
