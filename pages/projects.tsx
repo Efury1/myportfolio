@@ -8,7 +8,7 @@ import img2Path from "/images/Rickandmorty.png";
 import img3Path from "/images/TheFashionAggre.png";
 import img4Path from "/images/TheSimpsons.png";
 import img5Path from "/images/ShiftManager.png";
-import './globals.css';
+import '../styles/globals.css';
 import { Inter as Sans, Bitter as Serif, Fira_Code as Mono } from '@next/font/google';
 import Link from 'next/link';
 

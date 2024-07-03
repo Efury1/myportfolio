@@ -1,20 +1,33 @@
-import type { Config } from "tailwindcss";
+const colors = require('tailwindcss/colors');
+const { fontFamily } = require('tailwindcss/defaultTheme');
 
-const config: Config = {
+module.exports = {
   content: [
+    "./app/**/*.{js,ts,jsx,tsx,mdx}",
     "./pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./components/**/*.{js,ts,jsx,tsx,mdx}",
-    "./app/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
+    colors: {
+      'yellow': '#FFC759',
+      'pink': '#FF7B9C',
+      'blue': '#607196',
+      'purple': '#BABFD1',
+      'white': '#E8E9ED',
+      'sky-blue': '#52DCFCff',
+      'lavender-pink': '#FDADE2ff',
+      'denim':'#0E64C6ff',
+      'pink-lavender': '#DBAFD3ff',
+      'true-blue': '#4C6E9Bff',
+    },
     extend: {
-      backgroundImage: {
-        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-conic":
-          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+      fontFamily: {
+        sans: ['var(--font-sans)', ...fontFamily.sans],
+        serif: ['var(--font-serif)', ...fontFamily.serif],
+        mono: ['var(--font-mono)', ...fontFamily.mono],
       },
     },
   },
   plugins: [],
 };
-export default config;

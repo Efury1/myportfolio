@@ -3,7 +3,7 @@ import Head from 'next/head';
 import { AiFillLinkedin, AiFillYoutube } from 'react-icons/ai';
 import { FaGithubAlt, FaMedium } from 'react-icons/fa';
 import eliza from './eliza1.png';
-import './globals.css';
+import '../../styles/globals.css';
 import * as React from 'react';
 import Link from 'next/link';
 
