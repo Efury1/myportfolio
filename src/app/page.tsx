@@ -28,12 +28,18 @@ const mono = Mono({
 });
 
 export default function Home() {
+
   return (
     <main>
       <nav className="py-10 mb-12 flex justify-between">
         <h1 className="font-serif text-3xl text-pink">Eliza Fury</h1>
         <ul className="flex items-center">
-          <li>
+          <li className="flex space-x-4">
+            <a className="text-blue">About</a>
+            <Link className='text-blue' href="/projects">
+              Projects
+            </Link>
+
             <a
               className="bg-white hover:bg-pink hover:text-white text-blue font-semibold py-2 px-4 rounded-full shadow-lg transform hover:scale-105 transition-transform"
               target="_blank"
@@ -111,37 +117,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="text-center p-10">
-        <h3 className="text-2xl py-2 text">
 
-        </h3>
-        <h3 className="text-2xl py-2 text-center mx-px=12">Projects</h3>
-        <div className="py-10 mb-12 flex justify-between">
-          <p className="text-md py-5 leading-8 text-white-800 text-center">Eliza is a coding enthusiast with a passion for turning everyday hobbies into exciting digital adventures! By day, Eliza is a dedicated programmer, helping with software solutions. But when the clock strikes 5, it's time to unleash the creativity.</p>
-        </div>
-        <div className="columns-1 md:columns-1 grid grid-cols-1 sm:grid-cols-3">
-          <div className="max-w-xs mx-auto ring-1 border border-sky-10 space-x-3 mb-12 rounded-lg p-6 hover:-translate-y-1 hover:scale-110 hover:bg-indigo-500 duration-300">
-            <div className="text-center">Animal Crossing To Do List</div>
-            <div>
-              <Image src={animalcrossing} alt="Animal Crossing" />
-            </div>
-          </div>
-
-          <div className="max-w-xs mx-auto ring-1 border border-sky-10 space-x-3 mb-12 rounded-lg p-6 hover:-translate-y-1 hover:scale-110 hover:bg-indigo-500 duration-300">
-            <div className="text-center">Simpsons Quote App</div>
-            <div>
-              <Image src={thesimpsons} alt="The Simpsons" />
-            </div>
-          </div>
-
-          <div className="max-w-xs mx-auto ring-1 border border-sky-10 space-x-3 mb-12 rounded-lg p-6 hover:-translate-y-1 hover:scale-110 hover:bg-indigo-500 duration-300">
-            <div className="text-center">Rick and Morty Quiz App</div>
-            <div>
-              <Image src={rickandmorty} alt="Rick and Morty" />
-            </div>
-          </div>
-        </div>
-      </section>
 
       <footer className="footer footer-center w-full p-4 bg-pink">
         <div className="text-center">
