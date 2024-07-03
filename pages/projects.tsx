@@ -9,8 +9,23 @@ import img3Path from "/images/TheFashionAggre.png";
 import img4Path from "/images/TheSimpsons.png";
 import img5Path from "/images/ShiftManager.png";
 import './globals.css';
-
+import { Inter as Sans, Bitter as Serif, Fira_Code as Mono } from '@next/font/google';
 import Link from 'next/link';
+
+const sans = Sans({
+  subsets: ['latin'],
+  // this will be the css variable
+  variable: '--font-sans',
+});
+
+const serif = Serif({
+  subsets: ['latin'],
+  variable: '--font-serif',
+});
+const mono = Mono({
+  subsets: ['latin'],
+  variable: '--font-mono',
+});
 
 interface CustomImageProps extends ImageProps {
   description: string;
