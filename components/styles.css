@@ -1,0 +1,23 @@
+.image-viewer {
+    display: flex;
+    text-align: center;
+  }
+  
+  .image-container {
+    display: inline-block;
+    text-align: left;
+    max-width: 100%;
+    position: relative;
+  }
+  
+  .image {
+    float: left;
+    margin-right: 15px;
+    max-width: 50%;
+  }
+  
+  .description {
+    word-wrap: break-word;
+    max-width: 50%;
+  }
+  

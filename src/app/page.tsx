@@ -3,9 +3,6 @@ import Head from 'next/head';
 import { AiFillLinkedin, AiFillYoutube } from 'react-icons/ai';
 import { FaGithubAlt, FaMedium } from 'react-icons/fa';
 import eliza from './eliza1.png';
-import rickandmorty from './rickandmorty.png';
-import thesimpsons from './thesimpsons.png';
-import animalcrossing from './animalcrossing.png';
 import './globals.css';
 import * as React from 'react';
 import Link from 'next/link';
@@ -54,16 +51,12 @@ export default function Home() {
       <section>
         <div className="text-center p-10">
           <p className="before:block before:absolute before:-inset-1 before:-skew-y-3 before:bg-pink-500 relative inline-block bg-pink">
-            <h1 className="text-5xl py-2 text-white font-medium"> Eliza Fury</h1>
+            <h1 className="text-5xl py-2 text-white font-medium"> Hi, I'm Eliza Fury</h1>
           </p>
           <h3 className="text-2xl py-2 text-pink">Developer and Designer</h3>
           <p className="text-md py-5 leading-8 text-white-800">
-            Eliza Fury, hailing from Australia, is a multi-talented individual excelling in the fields of web development,
-            writing, and design. Her dynamic personality is characterized by an unwavering commitment to data-driven
-            methodologies, a strong advocacy for accessibility and inclusivity, and an infectious passion for her work.
-            Eliza brings a unique blend of creative flair and technical prowess to her endeavors, drawing from her
-            educational background which includes an advanced diploma in fashion and technology as well as a bachelor's
-            degree in computer science.
+          I'm a full stack developer that has a wide range of . My approach is deeply rooted in data-driven methodologies, and I'm dedicated to promoting accessibility and inclusivity in everything I do. I bring a blend of creativity and technical expertise to my projects, leveraging my educational background that spans an advanced diploma in fashion and technology alongside a bachelor's degree in computer science. 
+          Passion drives me, whether I'm crafting code, creating content, or designing user experiences.
           </p>
         </div>
         <div className="text-5xl flex justify-center gap-16 py-3 text-black-400 mb=12">
