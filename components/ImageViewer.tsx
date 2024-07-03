@@ -1,6 +1,6 @@
-import React from "react";
 import Image from "next/image";
-import './styles.css'
+import './styles.css';
+import React from "react";
 
 interface ImageViewerProps {
   selectedImage: string;
@@ -21,10 +21,8 @@ const ImageViewer: React.FC<ImageViewerProps> = ({
         <Image
           src={selectedImage}
           alt={selectedImage}
-          style={{
-            width: 1018,
-            maxWidth: "100%",
-          }}
+          width={500} // Specify a fixed width
+          height={300} // Specify a fixed height
           className="image py-2"
         />    
         <p className="description">{description}</p>
