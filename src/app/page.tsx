@@ -52,9 +52,9 @@ export default function Home() {
       </nav>
       <section>
         <div className="text-center p-10">
-          <p className="before:block before:absolute before:-inset-1 before:-skew-y-3 before:bg-pink-500 relative inline-block bg-pink">
-            <h1 className="text-5xl py-2 text-white font-medium"> Hi, I'm Eliza Fury</h1>
-          </p>
+        <div className="before:block before:absolute before:-inset-1 before:-skew-y-3 before:bg-pink-500 relative inline-block bg-pink">
+          <h1 className="text-5xl py-2 text-white font-medium">Hi, I'm Eliza Fury</h1>
+        </div>
           <h3 className="text-2xl py-2 text-pink">Developer and Designer</h3>
           <p className="text-md py-5 leading-8 text-white-800">
           I'm a full stack developer that has a wide range of . My approach is deeply rooted in data-driven methodologies, and I'm dedicated to promoting accessibility and inclusivity in everything I do. I bring a blend of creativity and technical expertise to my projects, leveraging my educational background that spans an advanced diploma in fashion and technology alongside a bachelor's degree in computer science. 

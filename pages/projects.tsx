@@ -85,7 +85,9 @@ export default function IndexPage(){
       </nav>
 
       <div className="text-center p-10">
-        <h1 className="text-5xl py-2 text-pink font-medium"> My Dev and Design Development</h1>
+      <div className="before:block before:absolute before:-inset-1 before:-skew-y-3 before:bg-pink-500 relative inline-block bg-pink">
+        <h1 className="text-5xl py-2 text-white font-medium">Look at my work</h1>
+      </div>
         <p className="text-md py-5 leading-8 text-white-800">
           My portfolio showcases a diverse range of disciplines that capture my interests. It encompasses my experiences in development, industrial design, and fashion.
         </p>
