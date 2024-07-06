@@ -111,40 +111,22 @@ export default function Home() {
           </div>
         </div>
       </section>
-
-
-
-      <footer className="footer footer-center w-full p-4 bg-pink">
-        <div className="text-center">
-          <a className="relative bg-pink-200 pt-8 pb-6" href="mailto:ejfury@protonmail.com">
-            <div className="container mx-auto px-4">
-              <div className="flex flex-wrap text-left lg:text-left">
-                <div className="w-full lg:w-6/12 px-4">
-                  <div className="container mx-auto px-4">
-                    <h4 className="text-3xl text-white">Need other things to explore?</h4>
-                    <h5 className="text-lg mt-0 mb-2 text-white">
-                      Don't hesitate to look through the footer.
-                    </h5>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="w-full lg:w-6/12 px-4 ">
-              <div className="flex flex-wrap items-top mb-6">
-                <div className="w-full lg:w-4/12 px-4 ml-auto">
-                  <span className="block uppercase text-sm font-semibold mb-2 text-right lg:text-right text-white">Other pages</span>
-                  <ul className="list-unstyled">
-                    <li>
-                      <Link href="/page2" className="block uppercase text-sm font-semibold mb-2 text-right lg:text-right text-white hover:text-yellow-400">Coming soon
-                      </Link>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </a>
+      <footer className="relative bg-pink-200 pt-8 pb-0 w-full">
+        <div className="overflow-hidden w-full">
+          <svg
+            className="w-full h-full"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 1440 320"
+          >
+            <path
+              fill="#FF7B9C"
+              fillOpacity=".9"
+              d="M0,64L8,85.3C96,107,192,149,288,176C384,203,480,213,576,197.3C672,181,768,139,864,138.7C960,139,1056,181,1152,186.7C1248,192,1344,160,1392,144L1440,128L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
+            ></path>
+          </svg>
         </div>
       </footer>
     </main>
+    
   );
 }
