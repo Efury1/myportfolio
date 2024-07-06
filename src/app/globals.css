@@ -9,8 +9,8 @@
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
   --font-sans: ${sans.style.fontFamily};
-    --font-serif: ${serif.style.fontFamily};
-    --font-mono: ${mono.style.fontFamily};
+  --font-serif: ${serif.style.fontFamily};
+  --font-mono: ${mono.style.fontFamily};
 }
 
 @media (prefers-color-scheme: dark) {
