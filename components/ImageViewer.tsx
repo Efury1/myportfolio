@@ -25,7 +25,7 @@ const ImageViewer: React.FC<ImageViewerProps> = ({
           height={300} 
           className="image py-2"
         />    
-        <div className="group block max-w-xs mx-auto rounded-lg p-7 bg-white ring-1 ring-slate-900/5 shadow-lg space-y-3 pd-5 my-5 text-brown">
+        <div className="description-container group block max-w-xs mx-auto rounded-lg p-7 bg-cream shadow-lg space-y-3 pd-5 my-5 text-brown">
           <p className="description">{description}</p>
         </div>
         <button
@@ -46,5 +46,3 @@ const ImageViewer: React.FC<ImageViewerProps> = ({
 };
 
 export default ImageViewer;
-
-

@@ -81,7 +81,7 @@ export default function Home() {
         <div className="columns-1 md:columns-1 grid grid-cols-1 sm:grid-cols-3">
           <div className="group block max-w-xs mx-auto rounded-lg p-6 bg-white shadow-lg space-y-3 pd-5 my-5">
             <h3 className="text-2xl py-1 text-brown">Development</h3>
-            <p className="text-white">As a frontend developer, I have knowledge of: </p>
+            <p className="text-brown">As a frontend developer, I have knowledge of: </p>
             <h4 className="py-2 text-brown">HTML, CSS and Javascript</h4>
             <h4 className="py-2 text-brown">Tailwind CSS</h4>
             <h4 className="py-2 text-brown">Responsive Web Design</h4>
