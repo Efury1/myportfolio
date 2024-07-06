@@ -65,15 +65,15 @@ export default function IndexPage(){
   return (
     <main>
       <nav className="py-10 mb-12 flex justify-between">
-        <h1 className="font-serif text-3xl text-pink">Eliza Fury</h1>
+        <h1 className="font-serif text-3xl text-brown">Eliza Fury</h1>
         <ul className="flex items-center">
           <li className="flex space-x-4">
-            <a className="text-blue" href="/">About</a>
-            <Link className='text-blue' href="/projects">
+            <a className="text-dark-brown" href="/">About</a>
+            <Link className='text-dark-brown' href="/projects">
               Projects
             </Link>
             <a
-              className="bg-white hover:bg-pink hover:text-white text-blue font-semibold py-2 px-4 rounded-full shadow-lg transform hover:scale-105 transition-transform"
+              className="bg-cream hover:bg-pink hover:text-white text-dark-brown font-semibold py-2 px-4 rounded-full shadow-lg transform hover:scale-105 transition-transform"
               target="_blank"
               rel="noopener noreferrer"
               href="https://www.linkedin.com/in/eliza-fury-3004b3110/"
@@ -85,10 +85,10 @@ export default function IndexPage(){
       </nav>
 
       <div className="text-center p-10">
-      <div className="before:block before:absolute before:-inset-1 before:-skew-y-3 before:bg-pink-500 relative inline-block bg-pink">
-        <h1 className="text-5xl py-2 text-white font-medium">Look at my work</h1>
-      </div>
-        <p className="text-md py-5 leading-8 text-white-800">
+        <div className="before:block before:absolute before:-inset-1 before:-skew-y-3 bg-pink relative inline-block">
+              <h1 className="text-5xl py-2 text-cream font-medium">My Projects</h1>
+        </div>
+        <p className="text-md py-5 leading-8 text-brown">
           My portfolio showcases a diverse range of disciplines that capture my interests. It encompasses my experiences in development, industrial design, and fashion.
         </p>
       </div>
@@ -107,13 +107,14 @@ export default function IndexPage(){
             <Image
               key={index}
               {...image}
-              className="border-4 border-solid border-blue-900  w-40 cursor-pointer hover:border-blue-500"
+              className="w-40 cursor-pointer"
               onClick={() => handleOnClicked(image.src as string, index)}
             />
           ))}
         </div>
       </div>
-      <footer className="relative bg-pink-200 pt-0 pb-0 w-full">
+      
+      <footer className="relative bg-pink-200 pt-8 pb-0 w-full">
         <div className="overflow-hidden w-full">
           <svg
             className="w-full h-full"

@@ -25,17 +25,17 @@ const ImageViewer: React.FC<ImageViewerProps> = ({
           height={300} 
           className="image py-2"
         />    
-        <div className="group block max-w-xs mx-auto rounded-lg p-6 bg-white ring-1 ring-slate-900/5 shadow-lg space-y-3 hover:bg-sky-500 hover:ring-sky-500 pd-5 my-5">
+        <div className="group block max-w-xs mx-auto rounded-lg p-7 bg-white ring-1 ring-slate-900/5 shadow-lg space-y-3 pd-5 my-5 text-brown">
           <p className="description">{description}</p>
         </div>
         <button
-          className="absolute top-1/2 transform -translate-y-1/2 left-0 text-white py-14 px-4 md:py-28 md:px-5 text-3xl md:text-5xl"
+          className="absolute top-1/2 transform -translate-y-1/2 left-0 text-brown py-14 px-4 md:py-28 md:px-5 text-3xl md:text-5xl"
           onClick={onPrev}
         >
           &lt;
         </button>
         <button
-          className="absolute top-1/2 transform -translate-y-1/2 right-0 text-white py-14 px-4 md:py-28 md:px-5 text-3xl md:text-5xl"
+          className="absolute top-1/2 transform -translate-y-1/2 right-0 text-brown py-14 px-4 md:py-28 md:px-5 text-3xl md:text-5xl"
           onClick={onNext}
         >
           &gt;

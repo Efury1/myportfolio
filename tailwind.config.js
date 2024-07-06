@@ -1,7 +1,7 @@
-const colors = require('tailwindcss/colors')
-/** @type {import('tailwindcss').Config} */
-const { fontFamily } = require('tailwindcss/defaultTheme')
+const colors = require('tailwindcss/colors');
 
+/** @type {import('tailwindcss').Config} */
+const { fontFamily } = require('tailwindcss/defaultTheme');
 
 module.exports = {
   content: [
@@ -13,16 +13,23 @@ module.exports = {
   ],
   theme: {
     colors: {
+      transparent: 'transparent',
+      current: 'currentColor',
       'yellow': '#FFC759',
-      'pink': '#FF7B9C',
       'blue': '#607196',
       'purple': '#BABFD1',
-      'white': '#E8E9ED',
+      'white': '#FFFFFF',
       'sky-blue': '#52DCFCff',
       'lavender-pink': '#FDADE2ff',
-      'denim':'#0E64C6ff',
+      'denim': '#0E64C6ff',
       'pink-lavender': '#DBAFD3ff',
       'true-blue': '#4C6E9Bff',
+      // New colors from the image
+      'background-peach': '#FDE2D0',
+      'cream': '#FFF7E6',
+      'brown': '#5C4033',
+      'pink': '#FF6F91',
+      'dark-brown': '#4A2C2A',
     },
     extend: {
       fontFamily: {
@@ -37,4 +44,4 @@ module.exports = {
     },
   },
   plugins: [],
-}
+};
