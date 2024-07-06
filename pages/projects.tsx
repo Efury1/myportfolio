@@ -83,12 +83,14 @@ export default function IndexPage(){
           </li>
         </ul>
       </nav>
+
       <div className="text-center p-10">
         <h1 className="text-5xl py-2 text-pink font-medium"> My Dev and Design Development</h1>
         <p className="text-md py-5 leading-8 text-white-800">
           My portfolio showcases a diverse range of disciplines that capture my interests. It encompasses my experiences in development, industrial design, and fashion.
         </p>
       </div>
+
       <div className="min-h-screen flex flex-col">
         {selectedImage && (
           <ImageViewer
@@ -108,6 +110,8 @@ export default function IndexPage(){
             />
           ))}
         </div>
+
+        
       </div>
     </main>
   );

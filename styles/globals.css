@@ -8,9 +8,9 @@
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
-  --font-sans: ${sans.style.fontFamily};
-    --font-serif: ${serif.style.fontFamily};
-    --font-mono: ${mono.style.fontFamily};
+  --font-sans: 'Inter', sans-serif;
+  --font-serif: 'Bitter', serif;
+  --font-mono: 'Fira Code', monospace;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -22,6 +22,7 @@
 }
 
 body {
+  font-family: var(--font-sans);
   color: rgb(var(--foreground-rgb));
   background: linear-gradient(
       to bottom,

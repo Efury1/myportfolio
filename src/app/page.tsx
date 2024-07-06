@@ -7,6 +7,8 @@ import '../../styles/globals.css';
 import * as React from 'react';
 import Link from 'next/link';
 
+
+
 import { Inter as Sans, Bitter as Serif, Fira_Code as Mono } from '@next/font/google';
 
 const sans = Sans({
