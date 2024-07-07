@@ -27,7 +27,7 @@ export default function Home() {
   return (
     <main className="bg-background-peach">
       <nav className="py-10 mb-12 flex justify-between">
-        <h1 className="font-serif text-3xl text-brown">Eliza Fury</h1>
+        <h1 className="font-kavoon text-3xl text-brown">Eliza Fury</h1>
         <ul className="flex items-center">
           <li className="flex space-x-4">
             <a className="text-dark-brown">About</a>
@@ -51,6 +51,9 @@ export default function Home() {
             <h1 className="text-5xl py-2 text-cream font-medium">Hi, I'm Eliza Fury</h1>
           </div>
           <h3 className="text-2xl py-2 text-pink">Developer and Designer</h3>
+          <div className="relative mx-auto rounded-full w-80 h-100 mt-100 overflow-hidden">
+          <Image src={eliza} alt="Eliza Fury" />
+        </div>
           <p className="text-md py-5 leading-8 text-brown">
             I'm a full stack developer that has a wide range of skills. My approach is deeply rooted in data-driven methodologies, and I'm dedicated to promoting accessibility and inclusivity in everything I do. I bring a blend of creativity and technical expertise to my projects, leveraging my educational background that spans an advanced diploma in fashion and technology alongside a bachelor's degree in computer science. 
             Passion drives me, whether I'm crafting code, creating content, or designing user experiences.
@@ -72,9 +75,6 @@ export default function Home() {
               <FaMedium />
             </button>
           </a>
-        </div>
-        <div className="relative mx-auto rounded-full w-80 h-100 mt-100 overflow-hidden">
-          <Image src={eliza} alt="Eliza Fury" />
         </div>
       </section>
       <section>
@@ -107,7 +107,6 @@ export default function Home() {
         </div>
       </section>
 
-
       <footer className="relative bg-pink-200 pt-8 pb-0 w-full">
         <div className="overflow-hidden w-full">
           <svg
@@ -124,6 +123,5 @@ export default function Home() {
         </div>
       </footer>
     </main>
-    
   );
 }

@@ -3,6 +3,7 @@
 @tailwind utilities;
 
 
+@import url('https://fonts.googleapis.com/css2?family=Playwrite+FR+Trad:wght@100..400&display=swap');
 
 :root {
   --foreground-rgb: 255, 248, 231;
@@ -30,5 +31,12 @@ body {
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb));
+}
+
+.playwrite-fr-trad-eliza-fury-title {
+  font-family: "Playwrite FR Trad", cursive;
+  font-optical-sizing: auto;
+  font-weight: 100;
+  font-style: normal;
 }
 

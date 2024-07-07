@@ -36,11 +36,11 @@ export default function IndexPage(){
   const [currentImageIndex, setCurrentImageIndex] = useState<number>(0);
 
   const images: CustomImageProps[] = [
-    { src: img1Path, alt: "Image 1", description: "This project draws inspiration from Animal Crossing. The To-Do List displays different quotes each time it is loaded, allowing users to remove and edit list items. This project is made with Javascript, HTML and CSS." },
-    { src: img2Path, alt: "Image 2", description: "This project is a Rick and Morty quiz application built using JavaScript, CSS, and HTML." },
-    { src: img3Path, alt: "Image 3", description: "This project utilizes Python and JavaScript. The Python backend scrapes fashion articles from the internet and presents them in the frontend." },
-    { src: img4Path, alt: "Image 4", description: "This project is a Simpsons quote generator featuring quotes from various characters. It's developed using JavaScript, HTML, and CSS." },
-    { src: img5Path, alt: "Image 5", description: "This project is a ruby on rails application designed for joining organizations, managing shifts, and viewing pay information." },
+    { src: img1Path, alt: "Animal Crossing app", description: "This project draws inspiration from Animal Crossing. The To-Do List displays different quotes each time it is loaded, allowing users to remove and edit list items. This project is made with Javascript, HTML and CSS." },
+    { src: img2Path, alt: "Rick and Morty quiz app", description: "This project is a Rick and Morty quiz application built using JavaScript, CSS, and HTML." },
+    { src: img3Path, alt: "Fashion aggregrator app", description: "This project utilizes Python and JavaScript. The Python backend scrapes fashion articles from the internet and presents them in the frontend." },
+    { src: img4Path, alt: "Simpsons quote generator", description: "This project is a Simpsons quote generator featuring quotes from various characters. It's developed using JavaScript, HTML, and CSS." },
+    { src: img5Path, alt: "Shift management app", description: "This project is a ruby on rails application designed for joining organizations, managing shifts, and viewing pay information." },
   ];
 
   const handleOnClicked = (src: string, index: number) => {
@@ -65,7 +65,7 @@ export default function IndexPage(){
   return (
     <main>
       <nav className="py-10 mb-12 flex justify-between">
-        <h1 className="font-serif text-3xl text-brown">Eliza Fury</h1>
+      <h1 className="playwrite-fr-trad-eliza-fury-title text-3xl text-brown">Eliza Fury</h1>
         <ul className="flex items-center">
           <li className="flex space-x-4">
             <a className="text-dark-brown" href="/">About</a>
