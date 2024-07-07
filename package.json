@@ -15,6 +15,7 @@
     "@emotion/react": "^11.11.4",
     "@emotion/styled": "^11.11.5",
     "@mui/material": "^5.14.8",
+    "@netlify/plugin-nextjs": "^5.5.0",
     "@next/font": "^13.4.19",
     "@types/node": "20.3.1",
     "@types/react": "18.2.14",
