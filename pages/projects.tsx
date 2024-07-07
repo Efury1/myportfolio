@@ -1,3 +1,5 @@
+"use client";
+
 import React, { useState } from "react";
 import Image, { ImageProps } from "next/image";
 import ImageViewer from "../components/ImageViewer";
@@ -12,6 +14,7 @@ import Link from 'next/link';
 
 const sans = Sans({
   subsets: ['latin'],
+  // this will be the css variable
   variable: '--font-sans',
 });
 
@@ -106,6 +109,7 @@ export default function IndexPage(){
               {...image}
               className="w-40 cursor-pointer"
               onClick={() => handleOnClicked(image.src as string, index)}
+              alt={image.alt}
             />
           ))}
         </div>
