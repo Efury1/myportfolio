@@ -48,15 +48,15 @@ export default function Home() {
       <section>
         <div className="text-center p-10">
           <div className="before:block before:absolute before:-inset-1 before:-skew-y-3 bg-pink relative inline-block">
-            <h1 className="text-5xl py-2 text-cream font-medium">Hi, I'm Eliza Fury</h1>
+            <h1 className="text-5xl py-2 text-cream font-medium">Hi, I&apos;m Eliza Fury</h1>
           </div>
           <h3 className="text-2xl py-2 text-pink">Developer and Designer</h3>
           <div className="relative mx-auto rounded-full w-80 h-100 mt-100 overflow-hidden">
           <Image src={eliza} alt="Eliza Fury" />
         </div>
           <p className="text-md py-5 leading-8 text-brown">
-            I'm a full stack developer that has a wide range of skills. My approach is deeply rooted in data-driven methodologies, and I'm dedicated to promoting accessibility and inclusivity in everything I do. I bring a blend of creativity and technical expertise to my projects, leveraging my educational background that spans an advanced diploma in fashion and technology alongside a bachelor's degree in computer science. 
-            Passion drives me, whether I'm crafting code, creating content, or designing user experiences.
+            I&apos;m a full stack developer that has a wide range of skills. My approach is deeply rooted in data-driven methodologies, and I&apos;m dedicated to promoting accessibility and inclusivity in everything I do. I bring a blend of creativity and technical expertise to my projects, leveraging my educational background that spans an advanced diploma in fashion and technology alongside a bachelor&apos;s degree in computer science. 
+            Passion drives me, whether I&apos;m crafting code, creating content, or designing user experiences.
           </p>
         </div>
         <div className="text-5xl flex justify-center gap-16 py-3 text-black-400 mb-12">
