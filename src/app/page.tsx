@@ -3,6 +3,7 @@ import Head from 'next/head';
 import { AiFillLinkedin, AiFillYoutube } from 'react-icons/ai';
 import { FaGithubAlt, FaMedium } from 'react-icons/fa';
 import './globals.css';
+
 import * as React from 'react';
 import Link from 'next/link';
 import eliza from './eliza1.png';
@@ -64,63 +65,30 @@ const exampleProfileData: ProfileData = {
   },
 };
 
-// Navbar Component
-// Navbar Component
-const Navbar: React.FC = () => {
-  return (
-    <nav className="bg-pink-600 p-4 shadow-md text-white">
-      <div className="max-w-6xl mx-auto flex space-x-8">
-        <Link href="/" className="hover:bg-pink-400 px-4 py-2 rounded">
-          home
-        </Link>
-        <Link href="/rss-feed" className="hover:bg-pink-400 px-4 py-2 rounded">
-          RSS Feed
-        </Link>
-        <Link href="/data-analytics" className="hover:bg-pink-400 px-4 py-2 rounded">
-          data analytics
-        </Link>
-        <Link href="/projects" className="hover:bg-pink-400 px-4 py-2 rounded">
-          projects
-        </Link>
-        <Link href="/design" className="hover:bg-pink-400 px-4 py-2 rounded">
-          design
-        </Link>
-        <Link href="/resume" className="hover:bg-pink-400 px-4 py-2 rounded">
-          resume
-        </Link>
-        <Link href="/other" className="hover:bg-pink-400 px-4 py-2 rounded">
-          other
-        </Link>
-      </div>
-    </nav>
-  );
-};
-
 const ProfileLayout: React.FC<ProfileLayoutProps> = ({ profileData }) => {
   return (
-    <div className="bg-green-50 font-sans">
-      <Navbar />
+    <div className="bg-green-50 font-sans min-h-screen">
       <div className="max-w-6xl mx-auto p-5 grid grid-cols-1 md:grid-cols-3 gap-4">
-        <div className="bg-white border rounded-lg shadow-md p-4">
-          <Image 
-            src={profileData.leftColumn.imageSrc} 
-            alt={profileData.leftColumn.name} 
-            width={400}
-            height={400}
-            className="rounded-full" 
+        {/* Left Column */}
+        <div className="bg-white border rounded-lg shadow-md p-4 flex flex-col items-center">
+          <Image
+            src={profileData.leftColumn.imageSrc}
+            alt={profileData.leftColumn.name}
+            width={200}
+            height={200}
+            className="rounded-full"
           />
-          <ProfileInfo 
-            name={profileData.leftColumn.name} 
-            bio={profileData.leftColumn.bio.split('<br>').join('\n')}
-          />
+          <ProfileInfo name={profileData.leftColumn.name} bio={profileData.leftColumn.bio.split('<br>').join('\n')} />
         </div>
 
-        <div className="bg-white border rounded-lg shadow-md p-4">
+        {/* Center Column */}
+        <div className="bg-white border rounded-lg shadow-md p-4 flex flex-col items-center">
           <h2 className="text-lg font-bold">{profileData.centerColumn.title}</h2>
           <p className="text-sm">{profileData.centerColumn.bio}</p>
         </div>
 
-        <div className="bg-white border rounded-lg shadow-md p-4">
+        {/* Right Column */}
+        <div className="bg-white border rounded-lg shadow-md p-4 flex flex-col items-center">
           <h3 className="text-lg font-bold">{profileData.rightColumn.title}</h3>
           <p className="text-sm">{profileData.rightColumn.details.split('<br>').join('\n')}</p>
         </div>
@@ -130,14 +98,15 @@ const ProfileLayout: React.FC<ProfileLayoutProps> = ({ profileData }) => {
 };
 
 const ProfileInfo: React.FC<ProfileInfoProps> = ({ name, bio }) => (
-  <div>
+  <div className="text-center mt-4">
     <h2 className="text-lg font-bold mb-2">About Me</h2>
     <p className="text-sm">
-      <strong>{name}</strong><br />
+      <strong>{name}</strong>
+      <br />
       {bio}
     </p>
     <h3 className="text-sm font-bold mt-4">Favourite Tech Products and Sites</h3>
-    <p className="text-sm">Pixel Chix, The Internet Archive, WebSliders </p>
+    <p className="text-sm">Pixel Chix, The Internet Archive, WebSliders</p>
   </div>
 );
 

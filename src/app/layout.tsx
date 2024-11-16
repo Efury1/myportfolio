@@ -1,21 +1,23 @@
-import './globals.css'
-import { Inter } from 'next/font/google'
+"use client"; // Make this a Client Component since it uses client-side interactivity
 
-const inter = Inter({ subsets: ['latin'] })
+import './globals.css';
+import { Inter } from 'next/font/google';
+import Navbar from '../components/Navbar'; // Import the Navbar component
+import React from 'react';
 
-export const metadata = {
-  title: 'Eliza Fury',
-  description: 'Eliza Fury, Portfolio',
-}
+const inter = Inter({ subsets: ['latin'] });
 
-export default function RootLayout({
+export default function Layout({
   children,
 }: {
-  children: React.ReactNode
+  children: React.ReactNode;
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        <Navbar /> {/* Navbar will be rendered on every page */}
+        <main>{children}</main> {/* Main content here */}
+      </body>
     </html>
-  )
+  );
 }
