@@ -8,7 +8,7 @@ const PlaylistEmbed: React.FC = () => {
       <Navbar />
       <div className="max-w-5xl mx-auto py-10 px-5">
         <h1 className="text-3xl font-bold text-teal-700 text-center mb-10">
-          Girl Chronically Online - All Videos Playlist
+          Girl Chronically Online - Watch video essay playlist
         </h1>
         <div className="flex justify-center">
           <iframe

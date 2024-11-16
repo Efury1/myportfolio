@@ -79,8 +79,8 @@ const Resume: React.FC<ResumeProfileProps> = ({ data }) => {
   return (
     <>
       <div className="max-w-3xl mx-auto mt-10 p-4 border border-gray-300 rounded-lg shadow-lg bg-gray-100">
-        <div className="bg-purple-700 text-white py-3 px-6 rounded-t-lg font-bold text-center text-lg">
-          MEMBER PROFILE
+        <div className="bg-purple text-white py-3 px-6 rounded-t-lg font-bold text-center text-lg">
+          Resume
         </div>
 
         <div className="p-6 text-gray-800">

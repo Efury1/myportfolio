@@ -20,6 +20,10 @@ yarn dev
 # or
 pnpm dev
 ```
+Install React Router DOM package.
+
+npm install react-router-dom
+Check package.json after you do this
 
 ## Portfolio Image
 
