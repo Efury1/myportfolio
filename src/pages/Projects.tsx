@@ -15,42 +15,42 @@ const products: Product[] = [
     id: 1,
     title: 'Typing-Simulator',
     imageSrc: '', // Replace with actual image URL
-    gitLink: '#',
+    gitLink: 'https://github.com/Efury1/Typing-Simulator',
     infoLink: '#',
   },
   {
     id: 2,
     title: 'Command-Line-To-Do-List',
     imageSrc: '', // Replace with actual image URL
-    gitLink: '#',
+    gitLink: 'https://github.com/Efury1/Command-Line-To-Do-List',
     infoLink: '#',
   },
   {
     id: 3,
     title: 'Fashion_Aggregator',
-    imageSrc: '', // Replace with actual image URL
-    gitLink: '#',
+    imageSrc: '', 
+    gitLink: 'https://github.com/Efury1/Fashion_Aggregator',
     infoLink: '#',
   },
   {
     id: 4,
     title: 'Rick-and-Morty-Quiz',
-    imageSrc: '', // Replace with actual image URL
-    gitLink: '#',
+    imageSrc: '', 
+    gitLink: 'https://github.com/Efury1/Rick-and-Morty-Quiz',
     infoLink: '#',
   },
   {
     id: 5,
     title: 'AnimalCrossing-ToDo',
-    imageSrc: '', // Replace with actual image URL
-    gitLink: '#',
+    imageSrc: '', 
+    gitLink: 'https://github.com/Efury1/AnimalCrossing-ToD',
     infoLink: '#',
   },
   {
     id: 6,
     title: 'Shift-manager',
-    imageSrc: '', // Replace with actual image URL
-    gitLink: '#',
+    imageSrc: '', 
+    gitLink: 'https://github.com/Efury1/Shift-manager',
     infoLink: '#',
   },
 ];
