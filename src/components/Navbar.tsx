@@ -26,7 +26,7 @@ const Navbar: React.FC = () => {
           Data Analytics
         </Link>
         <Link
-          href="/projects"
+          href="/Projects"
           className="text-pink-200 hover:text-white font-semibold tracking-wide hover:bg-pink-600 px-4 py-2 rounded-md"
         >
           Projects
