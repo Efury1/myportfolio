@@ -1,6 +1,7 @@
 "use client"; // Mark this file as a client component
 
 import Link from 'next/link';
+import "./globals.css";
 import React from 'react';
 
 const Navbar: React.FC = () => {
@@ -9,29 +10,28 @@ const Navbar: React.FC = () => {
       <div className="max-w-6xl mx-auto flex space-x-8">
         <Link
           href="/"
-          className="text-pink-200 hover:text-white font-semibold tracking-wide hover:bg-pink-600 px-4 py-2 rounded-md"
+          className="sunken-button text-pink-200 hover:text-white font-semibold tracking-wide px-4 py-2 rounded-md"
         >
           Home
         </Link>
         <Link
           href="/RSS"
-          className="text-pink-200 hover:text-white font-semibold tracking-wide hover:bg-pink-600 px-4 py-2 rounded-md"
+          className="sunken-button text-pink-200 hover:text-white font-semibold tracking-wide px-4 py-2 rounded-md"
         >
           Youtube
         </Link>
         <Link
           href="/Projects"
-          className="text-pink-200 hover:text-white font-semibold tracking-wide hover:bg-pink-600 px-4 py-2 rounded-md"
+          className="sunken-button text-pink-200 hover:text-white font-semibold tracking-wide px-4 py-2 rounded-md"
         >
           Projects
         </Link>
         <Link
           href="/ResumePage"
-          className="text-pink-200 hover:text-white font-semibold tracking-wide hover:bg-pink-600 px-4 py-2 rounded-md"
+          className="sunken-button text-pink-200 hover:text-white font-semibold tracking-wide px-4 py-2 rounded-md"
         >
           Resume
         </Link>
-
       </div>
     </nav>
   );

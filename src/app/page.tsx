@@ -65,6 +65,7 @@ const exampleProfileData: ProfileData = {
   },
 };
 
+
 const ProfileLayout: React.FC<ProfileLayoutProps> = ({ profileData }) => {
   return (
     <div className="bg-green-50 font-sans min-h-screen">

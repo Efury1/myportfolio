@@ -1,0 +1,17 @@
+.sunken-button {
+    background: #e0e0e0; /* Base background color */
+    border: 2px inset #a0a0a0; /* Inset border for sunken effect */
+    box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.3),
+                inset -2px -2px 5px rgba(255, 255, 255, 0.7);
+    color: #3b3b3b; /* Text color */
+    text-align: center;
+    transition: all 0.2s ease-in-out;
+  }
+  
+  .sunken-button:hover {
+    border: 2px outset #d0d0d0; /* Outset border for hover effect */
+    box-shadow: none; /* Removes shadow on hover */
+    background: #d6d6d6; /* Slightly lighter background */
+    color: #000; /* Darker text color */
+  }
+  
