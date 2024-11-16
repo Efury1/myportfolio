@@ -14,16 +14,10 @@ const Navbar: React.FC = () => {
           Home
         </Link>
         <Link
-          href="/rss-feed"
+          href="/RSS"
           className="text-pink-200 hover:text-white font-semibold tracking-wide hover:bg-pink-600 px-4 py-2 rounded-md"
         >
           RSS Feed
-        </Link>
-        <Link
-          href="/data-analytics"
-          className="text-pink-200 hover:text-white font-semibold tracking-wide hover:bg-pink-600 px-4 py-2 rounded-md"
-        >
-          Data Analytics
         </Link>
         <Link
           href="/Projects"
@@ -32,23 +26,12 @@ const Navbar: React.FC = () => {
           Projects
         </Link>
         <Link
-          href="/design"
-          className="text-pink-200 hover:text-white font-semibold tracking-wide hover:bg-pink-600 px-4 py-2 rounded-md"
-        >
-          Design
-        </Link>
-        <Link
           href="/ResumePage"
           className="text-pink-200 hover:text-white font-semibold tracking-wide hover:bg-pink-600 px-4 py-2 rounded-md"
         >
           Resume
         </Link>
-        <Link
-          href="/other"
-          className="text-pink-200 hover:text-white font-semibold tracking-wide hover:bg-pink-600 px-4 py-2 rounded-md"
-        >
-          Other
-        </Link>
+
       </div>
     </nav>
   );
