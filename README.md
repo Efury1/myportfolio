@@ -1,6 +1,4 @@
-Here’s an improved and polished version of your README file with proper structure, formatting, and corrected grammar:
 
----
 
 # GitHub Portfolio
 
