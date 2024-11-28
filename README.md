@@ -13,13 +13,28 @@ This is my portfolio website built using the **Tailwind CSS** framework and depl
 
 ---
 
-## Homepage Preview
+## Image Previews
 
-Below is an image showcasing the homepage:
-
+Homepage 
 <a href="https://ibb.co/XpJVfJJ">
     <img src="https://i.ibb.co/XpJVfJJ/Home.png" alt="Homepage Preview" width="200">
 </a>
+
+  Projects Page
+  <a href="https://ibb.co/wNbHf30">
+    <img src="https://i.ibb.co/wNbHf30/Projects.png" alt="Projects" style="width: 200px; height: auto; border: 0;">
+  </a>
+
+  Resume page
+  <a href="https://ibb.co/pn8XsCL">
+    <img src="https://i.ibb.co/pn8XsCL/Resume.png" alt="Resume" style="width: 200px; height: auto; border: 0;">
+  </a>
+
+  Youtube page
+  <a href="https://ibb.co/pbPP72b">
+    <img src="https://i.ibb.co/pbPP72b/Youtube.png" alt="YouTube" style="width: 200px; height: auto; border: 0;">
+  </a>
+</div>
 
 ---
 
