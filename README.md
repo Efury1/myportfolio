@@ -7,6 +7,8 @@ This is my portfolio website built using the Tailwind CSS framework deployed in 
 * Blocks to break down text
 
 ![Portfolio homepage](/PortfolioImg1.png "Portfolio Image")
+![Home](https://i.ibb.co/dLHvq8X/Home.png)
+
 
 
 ## Getting Started
