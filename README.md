@@ -1,8 +1,9 @@
 
-
 # GitHub Portfolio
 
-This is my portfolio website built using the **Tailwind CSS** framework and deployed on **Netlify**. The portfolio serves as a central hub for linking all my career-related social media profiles.
+This is my portfolio website built using the **Tailwind CSS** framework and deployed on **Netlify**. It serves as a central hub for linking all my career-related social media profiles.
+
+---
 
 ## Features
 
@@ -15,26 +16,25 @@ This is my portfolio website built using the **Tailwind CSS** framework and depl
 
 ## Image Previews
 
-Homepage 
+### Homepage
 <a href="https://ibb.co/XpJVfJJ">
-    <img src="https://i.ibb.co/XpJVfJJ/Home.png" alt="Homepage Preview" width="200">
+    <img src="https://i.ibb.co/XpJVfJJ/Home.png" alt="Homepage Preview" width="300" style="border: 0;">
 </a>
 
-  Projects Page
-  <a href="https://ibb.co/wNbHf30">
-    <img src="https://i.ibb.co/wNbHf30/Projects.png" alt="Projects" style="width: 200px; height: auto; border: 0;">
-  </a>
+### Projects Page
+<a href="https://ibb.co/wNbHf30">
+    <img src="https://i.ibb.co/wNbHf30/Projects.png" alt="Projects" width="300" style="border: 0;">
+</a>
 
-  Resume page
-  <a href="https://ibb.co/pn8XsCL">
-    <img src="https://i.ibb.co/pn8XsCL/Resume.png" alt="Resume" style="width: 200px; height: auto; border: 0;">
-  </a>
+### Resume Page
+<a href="https://ibb.co/pn8XsCL">
+    <img src="https://i.ibb.co/pn8XsCL/Resume.png" alt="Resume" width="300" style="border: 0;">
+</a>
 
-  Youtube page
-  <a href="https://ibb.co/pbPP72b">
-    <img src="https://i.ibb.co/pbPP72b/Youtube.png" alt="YouTube" style="width: 200px; height: auto; border: 0;">
-  </a>
-</div>
+### YouTube Channel Page
+<a href="https://ibb.co/pbPP72b">
+    <img src="https://i.ibb.co/pbPP72b/Youtube.png" alt="YouTube" width="300" style="border: 0;">
+</a>
 
 ---
 
@@ -46,15 +46,15 @@ I regularly update this repository every few weeks. Currently, I am working on i
 
 ## Getting Started
 
-To get started with the development environment, follow these steps:
+To set up the development environment:
 
-1. Clone the repository:
+1. **Clone the repository**:
    ```bash
    git clone https://github.com/your-username/your-repo-name.git
    cd your-repo-name
    ```
 
-2. Install dependencies:
+2. **Install dependencies**:
    ```bash
    npm install
    # or
@@ -63,7 +63,7 @@ To get started with the development environment, follow these steps:
    pnpm install
    ```
 
-3. Start the development server:
+3. **Start the development server**:
    ```bash
    npm run dev
    # or
@@ -72,28 +72,28 @@ To get started with the development environment, follow these steps:
    pnpm dev
    ```
 
-4. Install React Router DOM:
+4. **Install React Router DOM**:
    ```bash
    npm install react-router-dom
    ```
-   Check your `package.json` to confirm successful installation.
+   Confirm the installation in `package.json`.
 
-5. Open the project in your browser:
-   Navigate to [http://localhost:3000](http://localhost:3000) to view the running project.
+5. **Run the project**:
+   Open [http://localhost:3000](http://localhost:3000) in your browser to view the application.
 
 ---
 
 ## Deployment
 
-This project is deployed on **Netlify**. Any changes pushed to the `master` branch will automatically trigger a new build and deployment.
+This project is deployed on **Netlify**. Any changes pushed to the `master` branch automatically trigger a new build and deployment.
 
 ---
 
 ## Acknowledgments
 
-- **[Tailwind CSS](https://tailwindcss.com/):** For creating an amazing CSS framework.
-- **[Netlify](https://www.netlify.com/):** For providing seamless deployment options.
-- Everyone who has supported and inspired this portfolio project!
+- **[Tailwind CSS](https://tailwindcss.com/)**: For providing a powerful CSS framework.
+- **[Netlify](https://www.netlify.com/)**: For seamless deployment and hosting.
+- Everyone who supported and inspired this portfolio project.
 
 ---
 
@@ -101,3 +101,7 @@ This project is deployed on **Netlify**. Any changes pushed to the `master` bran
 
 [Visit my portfolio](https://main--elizafury.netlify.app/Projects)
 
+---
+
+### Notes:
+- The image previews are clickable and link to their respective pages.
