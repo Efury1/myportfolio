@@ -5,8 +5,7 @@ This is my portfolio website built using the Tailwind CSS framework deployed in 
 ## Features
 * Social media icons for easy access to social profiles
 * Blocks to break down text
-
-<img src="https://i.ibb.co/dLHvq8X/Home.png" alt="Home" width="100">
+[![Home](https://i.ibb.co/XpJVfJJ/Home.png)](https://ibb.co/XpJVfJJ)
 
 
 
