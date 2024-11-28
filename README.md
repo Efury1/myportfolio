@@ -6,8 +6,8 @@ This is my portfolio website built using the Tailwind CSS framework deployed in 
 * Social media icons for easy access to social profiles
 * Blocks to break down text
 
-![Portfolio homepage](/PortfolioImg1.png "Portfolio Image")
-![Home](https://i.ibb.co/dLHvq8X/Home.png)
+<img src="https://i.ibb.co/dLHvq8X/Home.png" alt="Home" width="800">
+
 
 
 
