@@ -86,5 +86,5 @@ This project is deployed on **Netlify**. Any changes pushed to the `master` bran
 
 ## Portfolio Link
 
-[Visit my portfolio]([https://your-portfolio-link.netlify.app](https://main--elizafury.netlify.app/Projects))
+[Visit my portfolio](https://main--elizafury.netlify.app/Projects)
 
