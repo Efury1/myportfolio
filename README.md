@@ -20,7 +20,7 @@ This is my portfolio website built using the **Tailwind CSS** framework and depl
 Below is an image showcasing the homepage:
 
 <a href="https://ibb.co/XpJVfJJ">
-    <img src="https://i.ibb.co/XpJVfJJ/Home.png" alt="Homepage Preview" width="500">
+    <img src="https://i.ibb.co/XpJVfJJ/Home.png" alt="Homepage Preview" width="200">
 </a>
 
 ---
