@@ -1,3 +1,4 @@
+Author: Eliza Fury
 
 # Portfolio Website
 
