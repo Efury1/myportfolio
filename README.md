@@ -1,6 +1,8 @@
-Author: Eliza Fury
 
 # Portfolio Website
+
+Author: Eliza Fury
+
 
 This is my portfolio website built using the **Tailwind CSS** framework and deployed on **Netlify**. It serves as a central hub for linking all my career-related social media profiles.
 
