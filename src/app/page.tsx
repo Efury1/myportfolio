@@ -5,23 +5,6 @@ import '../styles/globals.css';
 import * as React from 'react';
 import Head from 'next/head';
 
-import { Inter as Sans, Bitter as Serif, Fira_Code as Mono } from '@next/font/google';
-
-const sans = Sans({
-    subsets: ['latin'],
-    variable: '--font-sans',
-});
-
-const serif = Serif({
-    subsets: ['latin'],
-    variable: '--font-dserif',
-});
-
-const mono = Mono({
-    subsets: ['latin'],
-    variable: '--font-mono',
-});
-
 interface ProfileData {
     leftColumn: {
         imageSrc: string;
@@ -51,14 +34,14 @@ const exampleProfileData: ProfileData = {
     leftColumn: {
         imageSrc: require('./eliza1.png'),
         name: 'Eliza Fury',
-        bio: `I am a passionate Australian Full Stack Developer currently living in the UK. I am still adjusting to the weather. But I am excited about the many opportunities to explore here.
-        I graduated from Queensland University of Technology with a Bachelor's degree in Computer Science and a Graduate Certificate in Data Science. 
+        bio: `I am a passionate Australian <span style="color: #3b82f6;">Full Stack Developer</span> currently living in the UK. I am still adjusting to the weather. But I am excited about the many opportunities to explore here.
+        I graduated from Queensland University of Technology with a Bachelor's degree in <span style="color: #3b82f6;">Computer Science</span> and a Graduate Certificate in <span style="color: #3b82f6;">Data Analytics</span>. 
         My university studies also included design-based minors. Which is why I believe we have this beautiful website. I am currently seeking new opportunities
         in the UK. So please feel free to reach out and get in touch.`,
     },
     centerColumn: {
         title: 'Experience',
-        bio: 'With over two years of experience as a developer, I have worked on both frontend and backend development. My expertise includes React, TypeScript, JavaScript, as well as backend technologies like C# and Knockout. I have also worked with migrations and SQL. Additionally, I have specialized in accessibility, where I used JAWS to help individuals better access websites.',
+        bio: 'With over two years of experience as a developer, I have worked on both frontend and backend development. My expertise includes <span style="color: #3b82f6;">React</span>, <span style="color: #3b82f6;">TypeScript</span>, <span style="color: #3b82f6;">JavaScript</span>, as well as backend technologies like <span style="color: #3b82f6;">C#</span> and <span style="color: #3b82f6;">Knockout</span>. I have also worked with migrations and <span style="color: #3b82f6;">SQL</span>. Additionally, I have specialized in <span style="color: #3b82f6;">accessibility</span>, where I used JAWS to help individuals better access websites.',
     },
     rightColumn: {
         title: 'Contact Information',
@@ -82,25 +65,26 @@ const ProfileLayout: React.FC<ProfileLayoutProps> = ({ profileData }) => {
             <div className="font-mono min-h-screen">
                 <div className="max-w-6xl mx-auto p-5 grid grid-cols-1 md:grid-cols-3 gap-4">
                     {/* Left Column */}
-                    <div className="bg-white border border-black rounded-none p-4 flex flex-col items-center">
+                    <div className="bg-white border border-black rounded-none p-4 flex flex-col items-center" role="region" aria-labelledby="left-column">
                         <Image
                             src={profileData.leftColumn.imageSrc}
                             alt={`Profile picture of ${profileData.leftColumn.name}`}
                             width={200}
                             height={200}
                             className="rounded-full"
+                            aria-describedby="profile-image-description"
                         />
                         <ProfileInfo name={profileData.leftColumn.name} bio={profileData.leftColumn.bio} />
                     </div>
 
                     {/* Center Column */}
-                    <div className="bg-white border border-black rounded-none p-4 flex flex-col items-center">
+                    <div className="bg-white border border-black rounded-none p-4 flex flex-col items-center" role="region" aria-labelledby="center-column">
                         <h2 className="text-lg font-bold">{profileData.centerColumn.title}</h2>
-                        <p className="text-sm">{profileData.centerColumn.bio}</p>
+                        <p className="text-sm" dangerouslySetInnerHTML={{ __html: profileData.centerColumn.bio }} />
                     </div>
 
                     {/* Right Column */}
-                    <div className="bg-white border border-black rounded-none p-4 flex flex-col items-center">
+                    <div className="bg-white border border-black rounded-none p-4 flex flex-col items-center" role="region" aria-labelledby="right-column">
                         <h3 className="text-lg font-bold">{profileData.rightColumn.title}</h3>
                         <div
                             className="text-sm"
@@ -114,15 +98,17 @@ const ProfileLayout: React.FC<ProfileLayoutProps> = ({ profileData }) => {
 };
 
 const ProfileInfo: React.FC<ProfileInfoProps> = ({ name, bio }) => (
-    <div className="text-center mt-4">
+    <div className="text-center mt-4" role="region" aria-labelledby="profile-info">
         <h2 className="text-lg font-bold mb-2">About Me</h2>
         <p className="text-sm">
             <strong>{name}</strong>
             <br />
-            {bio}
+            <span dangerouslySetInnerHTML={{ __html: bio }} />
         </p>
         <h3 className="text-sm font-bold mt-4">Favourite Tech Products and Sites</h3>
-        <p className="text-sm">Pixel Chix, The Internet Archive, WebSliders</p>
+        <p className="text-sm">
+            <span style={{ color: '#3b82f6' }}>Pixel Chix</span>, <span style={{ color: '#3b82f6' }}>The Internet Archive</span>, <span style={{ color: '#3b82f6' }}>WebSliders</span>
+        </p>
     </div>
 );
 
