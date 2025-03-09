@@ -89,11 +89,9 @@ const ContactPage: React.FC = () => {
     return (
         <>
             <Navbar />
-            <div className="min-h-screen bg-gray-200 font-tahoma flex flex-col items-center">
                 <div className="flex-grow flex justify-center items-center w-full px-4">
                     <ContactForm />
                 </div>
-            </div>
         </>
     );
 };

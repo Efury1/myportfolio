@@ -66,7 +66,7 @@ const exampleProfileData: ProfileData = {
 
 const ProfileLayout: React.FC<ProfileLayoutProps> = ({ profileData }) => {
     return (
-        <div className="bg-gray-100 font-mono min-h-screen">
+        <div className=" font-mono min-h-screen">
             <div className="max-w-6xl mx-auto p-5 grid grid-cols-1 md:grid-cols-3 gap-4">
                 {/* Left Column */}
                 <div className="bg-white border border-black rounded-none p-4 flex flex-col items-center">
