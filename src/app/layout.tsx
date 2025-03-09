@@ -1,6 +1,6 @@
 "use client"; // Make this a Client Component since it uses client-side interactivity
 
-import './globals.css';
+import '../styles/globals.css';
 import { Inter } from 'next/font/google';
 import Navbar from '../components/Navbar'; // Import the Navbar component
 import React from 'react';

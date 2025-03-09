@@ -5,7 +5,7 @@ import rickandmorty from "../images/rickandmorty.png";
 import animalcrossing from "../images/animalcrossing.jpg"; 
 import shifts from "../images/shifts.jpg"; 
 import Navbar from "@/components/Navbar"; // Import the Navbar component
-import "./globals.css";
+import "../styles/globals.css";
 
 // Define the Product interface
 interface Product {

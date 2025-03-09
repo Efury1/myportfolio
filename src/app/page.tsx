@@ -2,7 +2,7 @@ import Image from 'next/image';
 import Head from 'next/head';
 import { AiFillLinkedin, AiFillYoutube } from 'react-icons/ai';
 import { FaGithubAlt, FaMedium } from 'react-icons/fa';
-import './globals.css';
+import '../styles/globals.css';
 
 import * as React from 'react';
 import Link from 'next/link';
@@ -50,20 +50,24 @@ interface ProfileInfoProps {
 }
 
 const exampleProfileData: ProfileData = {
-  leftColumn: {
+    leftColumn: {
     imageSrc: require('./eliza1.png'),
     name: 'Eliza Fury',
-    bio: 'Passionate Full Stack Developer. I love creating interactive and accessible experiences.<br>Vintage Tech Girly. ',
-  },
-  centerColumn: {
-    title: 'Experience',
-    bio: '2 Years experience with frontend and backend development, specializing in data analytics',
-  },
-  rightColumn: {
-    title: 'Contact Information',
-    details: 'Email: ejfury@protonmail.com<br>LinkedIn: https://www.linkedin.com/in/eliza-fury-3004b3110/',
-  },
+    bio: `I am a passionate Australian Full Stack Developer currently living in the UK. I am still adjusting to the weather. But I am excited about the many opportunities to explore here.
+    I graduated from Queensland University of Technology with a Bachelor's degree in Computer Science and a Graduate Certificate in Data Science. 
+    My university studies also included design-based minors. Which is why I believe we have this beautiful website. I am currently seeking new opportunities
+    in the UK. So please feel free to reach out and get in touch.`,
+    },
+    centerColumn: {
+        title: 'Experience',
+        bio: '2 Years experience with frontend and backend development, specializing in data analytics',
+    },
+    rightColumn: {
+        title: 'Contact Information',
+        details: 'Email: ejfury@protonmail.com<br>LinkedIn: https://www.linkedin.com/in/eliza-fury-3004b3110/',
+    },
 };
+
 
 
 const ProfileLayout: React.FC<ProfileLayoutProps> = ({ profileData }) => {

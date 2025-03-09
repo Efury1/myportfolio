@@ -1,6 +1,6 @@
 import * as React from "react";
 import Image, { StaticImageData } from "next/image";
-import "./globals.css";
+import "../styles/globals.css";
 import profilePic from "./eliza1.png";
 import Navbar from "@/components/Navbar";
 

@@ -1,0 +1,84 @@
+/* Tailwind's base styles */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+body {
+    @apply m-8;
+}
+.sunken-button {
+    background: #e0e0e0; /* Base background color */
+    border: 2px inset #a0a0a0; /* Inset border for sunken effect */
+    box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.3),
+                inset -2px -2px 5px rgba(255, 255, 255, 0.7);
+    color: #3b3b3b; /* Text color */
+    text-align: center;
+    transition: all 0.2s ease-in-out;
+  }
+  
+  .sunken-button:hover {
+    border: 2px outset #d0d0d0; /* Outset border for hover effect */
+    box-shadow: none; /* Removes shadow on hover */
+    background: #d6d6d6; /* Slightly lighter background */
+    color: #000; /* Darker text color */
+  }
+
+/* Defining CSS custom properties (variables) */
+:root {
+    --foreground-rgb: 0, 0, 0;
+    --background-start-rgb: 214, 219, 220;
+    --background-end-rgb: 255, 255, 255;
+    --font-sans: 'Inter', sans-serif; /* Hardcoded instead of using JavaScript template literals */
+    --font-serif: 'Bitter', serif; /* Replace with actual font names */
+    --font-mono: 'Fira Code', monospace;
+}
+
+/* Dark mode adjustments */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --foreground-rgb: 255, 255, 255;
+        --background-start-rgb: 0, 0, 0;
+        --background-end-rgb: 0, 0, 0;
+    }
+}
+
+/* Base styling for the body */
+body {
+    color: rgb(var(--foreground-rgb));
+    background: linear-gradient( to bottom, transparent, rgb(var(--background-end-rgb)) ) rgb(var(--background-start-rgb));
+    font-family: var(--font-sans);
+}
+
+/* Example styling for buttons to ensure visibility */
+button {
+    border: none;
+    cursor: pointer;
+    padding: 0.75rem 1.25rem;
+    border-radius: 9999px; /* rounded-full equivalent */
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+/* Custom Button Styles for Visibility */
+.bg-blue-500 {
+    background-color: #3b82f6; /* Tailwind's bg-blue-500 */
+    color: white;
+}
+
+.bg-yellow-500 {
+    background-color: #f59e0b; /* Tailwind's bg-yellow-500 */
+    color: black; /* Using black for contrast against yellow */
+}
+
+.bg-green-500 {
+    background-color: #22c55e; /* Tailwind's bg-green-500 */
+    color: white;
+}
+
+/* Add hover effects to make buttons interactive */
+button:hover {
+    filter: brightness(1.1);
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+}
