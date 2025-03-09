@@ -3,36 +3,14 @@
 @tailwind components;
 @tailwind utilities;
 
-
-
-body {
-    @apply m-8;
-}
-.sunken-button {
-    background: #e0e0e0; /* Base background color */
-    border: 2px inset #a0a0a0; /* Inset border for sunken effect */
-    box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.3),
-                inset -2px -2px 5px rgba(255, 255, 255, 0.7);
-    color: #3b3b3b; /* Text color */
-    text-align: center;
-    transition: all 0.2s ease-in-out;
-  }
-  
-  .sunken-button:hover {
-    border: 2px outset #d0d0d0; /* Outset border for hover effect */
-    box-shadow: none; /* Removes shadow on hover */
-    background: #d6d6d6; /* Slightly lighter background */
-    color: #000; /* Darker text color */
-  }
-
-/* Defining CSS custom properties (variables) */
+/* Custom CSS Variables for colors and fonts */
 :root {
     --foreground-rgb: 0, 0, 0;
     --background-start-rgb: 214, 219, 220;
     --background-end-rgb: 255, 255, 255;
-    --font-sans: 'Inter', sans-serif; /* Hardcoded instead of using JavaScript template literals */
-    --font-serif: 'Bitter', serif; /* Replace with actual font names */
-    --font-mono: 'Fira Code', monospace;
+    --font-sans: 'Tahoma', sans-serif; /* XP used Tahoma, so we'll use it here */
+    --font-serif: 'Times New Roman', serif;
+    --font-mono: 'Courier New', monospace;
 }
 
 /* Dark mode adjustments */
@@ -44,41 +22,116 @@ body {
     }
 }
 
-/* Base styling for the body */
+/* Global body styling */
 body {
     color: rgb(var(--foreground-rgb));
-    background: linear-gradient( to bottom, transparent, rgb(var(--background-end-rgb)) ) rgb(var(--background-start-rgb));
+    background: linear-gradient(to bottom, transparent, rgb(var(--background-end-rgb))) rgb(var(--background-start-rgb));
     font-family: var(--font-sans);
+    margin: 8px;
+    background-color: #f0f0f0; /* Light gray background for the page */
 }
 
-/* Example styling for buttons to ensure visibility */
+/* Base button styling */
 button {
     border: none;
     cursor: pointer;
     padding: 0.75rem 1.25rem;
-    border-radius: 9999px; /* rounded-full equivalent */
+    border-radius: 4px; /* Classic rounded corners */
     font-weight: bold;
     transition: all 0.3s ease;
+    font-family: var(--font-sans);
+    background-color: #e0e0e0; /* Windows XP classic gray button background */
+    border: 2px solid #a0a0a0; /* Subtle border color */
+    box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.3), inset -2px -2px 5px rgba(255, 255, 255, 0.7); /* Inset shadow for the sunken effect */
+    color: #3b3b3b; /* Dark text for visibility */
 }
 
-/* Custom Button Styles for Visibility */
+/* Sunken button effect */
+.sunken-button {
+    background-color: #e0e0e0;
+    border: 2px inset #a0a0a0;
+    box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.3), inset -2px -2px 5px rgba(255, 255, 255, 0.7);
+    color: #3b3b3b;
+    text-align: center;
+    transition: all 0.2s ease-in-out;
+}
+
+    .sunken-button:hover {
+        border: 2px outset #d0d0d0;
+        box-shadow: none;
+        background-color: #d6d6d6;
+        color: #000;
+    }
+
+/* Hover effects for standard buttons */
+button:hover {
+    background-color: #d0d0d0; /* Slightly darker background */
+    box-shadow: inset 0px 0px 8px rgba(0, 0, 0, 0.2), inset 0px 0px 8px rgba(255, 255, 255, 0.4); /* Enhanced shadow on hover */
+}
+
+/* Windows-style button for main buttons */
+.windows-button {
+    background-color: #f0f0f0;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.1), inset -2px -2px 5px rgba(255, 255, 255, 0.5);
+    transition: all 0.2s ease;
+}
+
+    .windows-button:hover {
+        background-color: #e1e1e1;
+        box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.15), inset -2px -2px 5px rgba(255, 255, 255, 0.3);
+    }
+
+    .windows-button:active {
+        background-color: #d4d4d4;
+        box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.25), inset -2px -2px 5px rgba(255, 255, 255, 0.4);
+    }
+
+/* Button color variations for different types */
 .bg-blue-500 {
-    background-color: #3b82f6; /* Tailwind's bg-blue-500 */
+    background-color: #3b82f6;
     color: white;
 }
 
 .bg-yellow-500 {
-    background-color: #f59e0b; /* Tailwind's bg-yellow-500 */
-    color: black; /* Using black for contrast against yellow */
+    background-color: #f59e0b;
+    color: black;
 }
 
 .bg-green-500 {
-    background-color: #22c55e; /* Tailwind's bg-green-500 */
+    background-color: #22c55e;
     color: white;
 }
 
-/* Add hover effects to make buttons interactive */
-button:hover {
-    filter: brightness(1.1);
-    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+/* Hover effects for colored buttons */
+.bg-blue-500:hover {
+    background-color: #2563eb;
 }
+
+.bg-yellow-500:hover {
+    background-color: #d97706;
+}
+
+.bg-green-500:hover {
+    background-color: #16a34a;
+}
+
+/* Special styling for 'Say Hello' button with XP blue color */
+.say-hello-button {
+    background-color: #1e90ff; /* Windows XP blue */
+    color: white;
+    border: 2px solid #1c86ee; /* Matching border */
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15);
+    transition: all 0.3s ease;
+}
+
+    .say-hello-button:hover {
+        background-color: #1c86ee;
+        box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.25);
+    }
+
+    .say-hello-button:active {
+        background-color: #1c75d1;
+        box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.35);
+    }
