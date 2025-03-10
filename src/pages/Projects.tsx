@@ -10,7 +10,10 @@ import rickandmorty from "../images/rickandmorty.png";
 import animalcrossing from "../images/animalcrossing.jpg";
 import TheGumtreeDiaries from "../images/TheGumtreeDiaries.jpg";
 import PrettyPrintMe from "../images/PrettyPrintMe.jpg";
+import CommandLine from "../images/CommandLine.jpg";
+import Assignment2 from "../images/Assignment2.jpg";
 import Covid19 from "../images/Covid19.jpg";
+import Simulator from "../images/Simulator.jpg";
 import DearSanta from "../images/DearSanta.jpg";
 import shifts from "../images/shifts.jpg";
 
@@ -27,7 +30,7 @@ const products: Product[] = [
     {
         id: 1,
         title: "Typing-Simulator",
-        imageSrc: "",
+        imageSrc: Simulator,
         gitLink: "https://github.com/Efury1/Typing-Simulator",
         infoLink: "#",
         description: "A typing simulation game to enhance your skills.",
@@ -35,7 +38,7 @@ const products: Product[] = [
     {
         id: 2,
         title: "Command-Line-To-Do-List",
-        imageSrc: "",
+        imageSrc: CommandLine,
         gitLink: "https://github.com/Efury1/Command-Line-To-Do-List",
         infoLink: "#",
         description: "A simple CLI-based to-do list application.",
@@ -83,7 +86,7 @@ const products: Product[] = [
     {
         id: 9,
         title: "Data-Exploration-and-Mining",
-        imageSrc: "",
+        imageSrc: Assignment2,
         gitLink: "https://github.com/Efury1/Data-Exploration-and-Mining",
         infoLink: "#",
         description: "A project applying data mining techniques to analyze a dataset and extract insights.",
@@ -168,16 +171,6 @@ const ProductGrid: React.FC = () => {
                                 >
                                     GitHub Repository
                                 </a>
-                                {project.infoLink && (
-                                    <a
-                                        href={project.infoLink}
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                        className="text-teal-600 hover:underline"
-                                    >
-                                        More Info
-                                    </a>
-                                )}
                                 <p className="text-gray-600 text-sm mt-2 text-center">{project.description}</p>
                             </div>
                         </div>
