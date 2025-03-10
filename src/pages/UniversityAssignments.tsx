@@ -13,8 +13,8 @@ const UniversityAssignments: React.FC = () => {
 
                     <div className="p-4 space-y-4">
                         <p className="text-xs text-gray-700">
-                            Click on the links below to download the PDFs:
-                            NOTE: This is still being developed
+                            Click on the link below to download the ZIP file containing the PDF.
+                            NOTE: This is still being developed.
                         </p>
 
                         <div className="flex items-center space-x-4">
@@ -24,11 +24,11 @@ const UniversityAssignments: React.FC = () => {
                                 className="w-6 h-6"
                             />
                             <a
-                                href="/PDFs/ProjectManagment.pdf"
-                                download="Project Management"
+                                href="/ProjectManagment.pdf"  // Correct path if it's in the public folder
+                                download="ProjectManagementDownload" // Custom filename for download
                                 className="text-blue-600 hover:underline text-sm"
                             >
-                                Download Project Management
+                                Download Project Management PDF
                             </a>
                         </div>
                     </div>
