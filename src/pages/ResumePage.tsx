@@ -75,6 +75,11 @@ const resumeData = {
 };
 
 const Resume: React.FC<ResumeProfileProps> = ({ data }) => {
+    const [isRolesVisible, setIsRolesVisible] = React.useState(true);
+
+    const handleClose = () => {
+        setIsRolesVisible((prev) => !prev); // Toggle visibility on each click
+    };
   return (
     <>
       <div className="max-w-4xl mx-auto mt-10 p-6 bg-white shadow-md border border-gray-300 rounded-lg">
@@ -122,30 +127,46 @@ const Resume: React.FC<ResumeProfileProps> = ({ data }) => {
           </div>
 
           {/* Dynamic Roles Section */}
-          <div className="mt-10">
-            <h3 className="text-2xl font-bold text-center mb-6">Previous Work Experience</h3>
-            {data.roles.map((role, index) => (
-              <div
-                key={index}
-                className="p-4 mb-6 border border-gray-200 rounded-lg bg-white shadow-md"
-              >
-                <h4 className="text-xl font-bold text-purple-700">{role.title}</h4>
-                <p className="text-sm text-gray-600">{role.company}</p>
-                <p className="text-sm text-gray-500">{role.location}</p>
-                <p className="text-sm text-gray-500">{role.years}</p>
-                <p className="mt-2 text-gray-800">{role.description}</p>
-                <p className="mt-2 text-teal-600">
-                  <strong>Skills:</strong> {role.skills}
-                </p>
-                {role.keyAchievement && (
-                  <p className="mt-2 text-purple-600">
-                    <strong>Key Achievement:</strong> {role.keyAchievement}
-                  </p>
-                )}
-              </div>
-            ))}
-          </div>
+        <div className="mt-10">
+            <div
+                className="popup-container p-4 mb-6 border-2 border-black rounded-md bg-white shadow-lg"
+                style={{ width: '90%', maxWidth: '600px', margin: 'auto' }}
+            >
+                <div className="popup-header bg-blue-600 text-white p-2 rounded-t-md flex justify-between items-center">
+                    <h3 className="text-2xl font-bold text-center">Previous Work Experience</h3>
+                    <button
+                        className="close-button"
+                        aria-label="Toggle roles visibility"
+                        onClick={handleClose}
+                    >
+                        ×
+                    </button>
+                </div>
+
+                {/* Conditionally render roles */}
+                {isRolesVisible && data.roles.map((role, index) => (
+                    <div
+                        key={index}
+                        className="p-4 mb-6 border-2 border-black rounded-md bg-white shadow-lg"
+                    >
+                        <h4 className="text-xl font-bold text-purple-700">{role.title}</h4>
+                        <p className="text-sm text-gray-600">{role.company}</p>
+                        <p className="text-sm text-gray-500">{role.location}</p>
+                        <p className="text-sm text-gray-500">{role.years}</p>
+                        <p className="mt-2 text-gray-800">{role.description}</p>
+                        <p className="mt-2 text-teal-600">
+                            <strong>Skills:</strong> {role.skills}
+                        </p>
+                        {role.keyAchievement && (
+                            <p className="mt-2 text-purple-600">
+                                <strong>Key Achievement:</strong> {role.keyAchievement}
+                            </p>
+                        )}
+                    </div>
+                ))}
+            </div>
         </div>
+      </div>
       </div>
     </>
   );

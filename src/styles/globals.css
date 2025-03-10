@@ -135,3 +135,22 @@ button:hover {
         background-color: #1c75d1;
         box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.35);
     }
+
+/* Close button style */
+.close-button {
+    background: none;
+    border: none;
+    font-size: 18px;
+    color: black;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+    .close-button:hover {
+        color: #666;
+    }
+
+    /* Accessible focus styles */
+    .close-button:focus {
+        outline: 3px solid #0056b3;
+    }
