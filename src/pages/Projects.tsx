@@ -1,11 +1,18 @@
 ﻿import * as React from "react";
 import Image, { StaticImageData } from "next/image";
-import FashionAggre from "../images/TheFashionAggre.png";
-import rickandmorty from "../images/rickandmorty.png";
-import animalcrossing from "../images/animalcrossing.jpg";
-import shifts from "../images/shifts.jpg";
 import Navbar from "@/components/Navbar";
 import "../styles/globals.css";
+
+// Import images
+import EarScanner3D from "../images/EarScanner3D.jpg";
+import EthicalAI from "../images/EthicalAI.jpeg";
+import rickandmorty from "../images/rickandmorty.png";
+import animalcrossing from "../images/animalcrossing.jpg";
+import TheGumtreeDiaries from "../images/TheGumtreeDiaries.jpg";
+import PrettyPrintMe from "../images/PrettyPrintMe.jpg";
+import Covid19 from "../images/Covid19.jpg";
+import DearSanta from "../images/DearSanta.jpg";
+import shifts from "../images/shifts.jpg";
 
 interface Product {
     id: number;
@@ -34,14 +41,6 @@ const products: Product[] = [
         description: "A simple CLI-based to-do list application.",
     },
     {
-        id: 3,
-        title: "Fashion_Aggregator",
-        imageSrc: FashionAggre,
-        gitLink: "https://github.com/Efury1/Fashion_Aggregator",
-        infoLink: "#",
-        description: "A tool to aggregate and display fashion trends.",
-    },
-    {
         id: 4,
         title: "Rick-and-Morty-Quiz",
         imageSrc: rickandmorty,
@@ -65,6 +64,54 @@ const products: Product[] = [
         infoLink: "#",
         description: "Manage employee shifts effectively.",
     },
+    {
+        id: 7,
+        title: "Pretty-Print-Me",
+        imageSrc: PrettyPrintMe,
+        gitLink: "https://github.com/Efury1/Pretty-Print-Me",
+        infoLink: "#",
+        description: "A website for creating and printing invitation designs.",
+    },
+    {
+        id: 8,
+        title: "The-Gumtree-Diaries",
+        imageSrc: TheGumtreeDiaries,
+        gitLink: "https://github.com/Efury1/The-Gumtree-Diaries",
+        infoLink: "#",
+        description: "A travel blog documenting my journey of moving to the UK.",
+    },
+    {
+        id: 9,
+        title: "Data-Exploration-and-Mining",
+        imageSrc: "",
+        gitLink: "https://github.com/Efury1/Data-Exploration-and-Mining",
+        infoLink: "#",
+        description: "A project applying data mining techniques to analyze a dataset and extract insights.",
+    },
+    {
+        id: 10,
+        title: "SantaMail",
+        imageSrc: DearSanta,
+        gitLink: "https://github.com/Efury1/SantaMessager",
+        infoLink: "#",
+        description: "A cozy project that lets you send Christmas messages to Santa using Nodemailer.",
+    },
+    {
+        id: 11,
+        title: "Ethical-AI-Exploration",
+        imageSrc: EthicalAI,
+        gitLink: "https://github.com/Efury1/Ethical-AI-Exploration",
+        infoLink: "#",
+        description: "A machine learning model to predict user budgets for the IDOOU app with a focus on ethical AI.",
+    },
+    {
+        id: 12,
+        title: "EarScanner3D",
+        imageSrc: EarScanner3D,
+        gitLink: "https://github.com/Efury1/EarScanner3D",
+        infoLink: "#",
+        description: "A medical app to assist people with microtia by capturing the external ear using smartphone-based 3D scanning.",
+    }
 ];
 
 const ProductGrid: React.FC = () => {
@@ -93,20 +140,13 @@ const ProductGrid: React.FC = () => {
                             className="bg-white rounded-lg shadow-lg border border-gray-300 p-6 hover:shadow-xl transition-shadow"
                         >
                             <div className="flex justify-center mb-4">
-                                {typeof project.imageSrc === "string" && project.imageSrc ? (
-                                    <img
-                                        src={project.imageSrc}
-                                        alt={project.title}
-                                        className="w-48 h-48 object-contain rounded-md"
-                                    />
-                                ) : project.imageSrc ? (
+                                {project.imageSrc ? (
                                     <Image
                                         src={project.imageSrc}
                                         alt={project.title}
                                         width={400}
                                         height={400}
-                                        className="rounded-md"
-                                        objectFit="contain"
+                                        className="rounded-md object-contain"
                                     />
                                 ) : (
                                     <div className="w-48 h-48 bg-gray-100 rounded-md flex items-center justify-center">
@@ -124,24 +164,21 @@ const ProductGrid: React.FC = () => {
                                     href={project.gitLink}
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    className="text-blue-600 underline hover:text-blue-800 transition"
+                                    className="text-teal-600 hover:underline"
                                 >
-                                    Github
+                                    GitHub Repository
                                 </a>
-                                <a
-                                    href={project.infoLink}
-                                    className="text-blue-600 underline hover:text-blue-800 transition relative"
-                                    aria-describedby={`tooltip-${project.id}`}
-                                >
-                                    More Info
-                                    <div
-                                        id={`tooltip-${project.id}`}
-                                        role="tooltip"
-                                        className="absolute left-1/2 transform -translate-x-1/2 mt-2 bg-pink-500 text-black text-sm rounded-md px-3 py-2 opacity-0 group-hover:opacity-100 transition-opacity z-10 shadow-lg"
+                                {project.infoLink && (
+                                    <a
+                                        href={project.infoLink}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="text-teal-600 hover:underline"
                                     >
-                                        {project.description}
-                                    </div>
-                                </a>
+                                        More Info
+                                    </a>
+                                )}
+                                <p className="text-gray-600 text-sm mt-2 text-center">{project.description}</p>
                             </div>
                         </div>
                     ))}
