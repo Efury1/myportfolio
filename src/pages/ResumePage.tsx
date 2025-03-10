@@ -33,7 +33,7 @@ const resumeData = {
   title: "Full Stack Developer",
   company: "One Model · Full-time",
   location: "Brisbane, Queensland, Australia",
-  years: "Apr 2022 to Present · 2 yrs 8 mos",
+  years: "Apr 2022 to Feb 2025· 2 yrs 8 mos",
   description:
     "• Work with the React Framework, Typescript, HTML5, and CSS to create user-friendly and visually appealing interfaces.\n• Collaborate with a team of developers to implement new features and enhance existing functionalities.\n• Conduct accessibility audits on our website using the JAWS screen reader technology and keyboard navigation.\n• Implemented Onion Architecture in C# to ensure separation of concerns.\n• Converted existing Knockout.js view models into React components.",
   skills: "C# · React · KnockoutJS · JavaScript · W3C Accessibility · Onion architecture",
@@ -80,96 +80,104 @@ const Resume: React.FC<ResumeProfileProps> = ({ data }) => {
     const handleClose = () => {
         setIsRolesVisible((prev) => !prev); // Toggle visibility on each click
     };
-  return (
-    <>
-      <div className="max-w-4xl mx-auto mt-10 p-6 bg-white shadow-md border border-gray-300 rounded-lg">
-        <div className="bg-purple-600 text-white py-3 px-6 rounded-t-lg font-bold text-center text-xl">
-          Resume
-        </div>
 
-        <div className="p-6 text-gray-800">
-          <div className="flex flex-col md:flex-row gap-4">
-            <div className="w-full md:w-1/2 p-4">
-              <p className="font-semibold">Name:</p>
-              <p className="text-teal-600 text-lg">{data.name}</p>
-
-              <p className="font-semibold mt-4">Title:</p>
-              <p className="text-teal-600">{data.title}</p>
-
-              <p className="font-semibold mt-4">Company:</p>
-              <p className="text-teal-600">{data.company}</p>
-
-              <p className="font-semibold mt-4">Location:</p>
-              <p className="text-teal-600">{data.location}</p>
+    return (
+        <div className="max-w-4xl mx-auto mt-10 p-6 bg-white shadow-md border border-gray-300 rounded-lg">
+            <div className="bg-blue-500 text-white py-4 px-6 rounded-t-lg font-semibold text-center text-2xl">
+                Resume
             </div>
 
-            <div className="w-full md:w-1/2 p-4">
-              <p className="font-semibold">Experience:</p>
-              <p className="text-teal-600">{data.years}</p>
+            <div className="p-6 text-gray-800">
+                {/* Personal Info Section */}
+                <div className="flex flex-col md:flex-row gap-4">
+                    <div className="w-full md:w-1/2 p-4">
+                        <p className="font-medium text-sm text-gray-600">Name:</p>
+                        <p className="text-indigo-600 text-xl">{data.name}</p>
 
-              <p className="font-semibold mt-4">Description:</p>
-              <p className="text-teal-600 whitespace-pre-line">{data.description}</p>
+                        <p className="font-medium text-sm text-gray-600 mt-4">Title:</p>
+                        <p className="text-indigo-600 text-lg">{data.title}</p>
 
-              <p className="font-semibold mt-4">Skills:</p>
-              <p className="text-teal-600">{data.skills}</p>
-            </div>
-          </div>
+                        <p className="font-medium text-sm text-gray-600 mt-4">Company:</p>
+                        <p className="text-indigo-600 text-lg">{data.company}</p>
 
-          <div className="mt-6 text-center">
-            <p className="font-semibold">Photo:</p>
-            <Image
-              src={data.photo}
-              alt={data.name}
-              width={150}
-              height={200}
-              className="inline-block rounded-lg mt-2"
-            />
-          </div>
+                        <p className="font-medium text-sm text-gray-600 mt-4">Location:</p>
+                        <p className="text-indigo-600 text-lg">{data.location}</p>
+                    </div>
 
-          {/* Dynamic Roles Section */}
-        <div className="mt-10">
-            <div
-                className="popup-container p-4 mb-6 border-2 border-black rounded-md bg-white shadow-lg"
-                style={{ width: '90%', maxWidth: '600px', margin: 'auto' }}
-            >
-                <div className="popup-header bg-blue-600 text-white p-2 rounded-t-md flex justify-between items-center">
-                    <h3 className="text-2xl font-bold text-center">Previous Work Experience</h3>
-                    <button
-                        className="close-button"
-                        aria-label="Toggle roles visibility"
-                        onClick={handleClose}
-                    >
-                        ×
-                    </button>
+                    <div className="w-full md:w-1/2 p-4">
+                        <p className="font-medium text-sm text-gray-600">Experience:</p>
+                        <p className="text-indigo-600 text-xl">{data.years}</p>
+
+                        <p className="font-medium text-sm text-gray-600 mt-4">Description:</p>
+                        <p className="text-indigo-600 whitespace-pre-line">{data.description}</p>
+
+                        <p className="font-medium text-sm text-gray-600 mt-4">Skills:</p>
+                        <p className="text-indigo-600">{data.skills}</p>
+                    </div>
                 </div>
 
-                {/* Conditionally render roles */}
-                {isRolesVisible && data.roles.map((role, index) => (
-                    <div
-                        key={index}
-                        className="p-4 mb-6 border-2 border-black rounded-md bg-white shadow-lg"
-                    >
-                        <h4 className="text-xl font-bold text-purple-700">{role.title}</h4>
-                        <p className="text-sm text-gray-600">{role.company}</p>
-                        <p className="text-sm text-gray-500">{role.location}</p>
-                        <p className="text-sm text-gray-500">{role.years}</p>
-                        <p className="mt-2 text-gray-800">{role.description}</p>
-                        <p className="mt-2 text-teal-600">
-                            <strong>Skills:</strong> {role.skills}
-                        </p>
-                        {role.keyAchievement && (
-                            <p className="mt-2 text-purple-600">
-                                <strong>Key Achievement:</strong> {role.keyAchievement}
-                            </p>
-                        )}
+                {/* Photo Section */}
+                <div className="mt-6 text-center">
+                    <p className="font-semibold">Photo:</p>
+                    <div className="relative inline-block">
+                        <Image
+                            src={data.photo}
+                            alt={data.name}
+                            width={150}
+                            height={150} // Square dimensions
+                            className="border-4 border-gray-500 shadow-lg transition-transform duration-200 ease-in-out hover:scale-105 hover:shadow-2xl"
+                        />
+                        {/* Adding a subtle focus effect on hover */}
+                        <div className="absolute inset-0 border-4 border-blue-600 opacity-0 transition-opacity duration-200 ease-in-out hover:opacity-100" />
                     </div>
-                ))}
+                </div>
+
+
+
+                {/* Roles Section */}
+                <div className="mt-10">
+                    <div
+                        className="popup-container p-4 mb-6 border-2 border-black rounded-md bg-white shadow-lg"
+                        style={{ width: '90%', maxWidth: '600px', margin: 'auto' }}
+                    >
+                        <div className="popup-header bg-blue-600 text-white p-2 rounded-t-md flex justify-between items-center">
+                            <h3 className="text-2xl font-bold text-center">Previous Work Experience</h3>
+                            <button
+                                className="close-button"
+                                aria-label="Toggle roles visibility"
+                                onClick={handleClose}
+                            >
+                                ×
+                            </button>
+                        </div>
+
+                        {/* Conditionally render roles */}
+                        {isRolesVisible &&
+                            data.roles.map((role, index) => (
+                                <div
+                                    key={index}
+                                    className="p-4 mb-6 border-2 border-black rounded-md bg-white shadow-lg"
+                                >
+                                    <h4 className="text-xl font-bold text-purple-700">{role.title}</h4>
+                                    <p className="text-sm text-gray-600">{role.company}</p>
+                                    <p className="text-sm text-gray-500">{role.location}</p>
+                                    <p className="text-sm text-gray-500">{role.years}</p>
+                                    <p className="mt-2 text-gray-800">{role.description}</p>
+                                    <p className="mt-2 text-teal-600">
+                                        <strong>Skills:</strong> {role.skills}
+                                    </p>
+                                    {role.keyAchievement && (
+                                        <p className="mt-2 text-purple-600">
+                                            <strong>Key Achievement:</strong> {role.keyAchievement}
+                                        </p>
+                                    )}
+                                </div>
+                            ))}
+                    </div>
+                </div>
             </div>
         </div>
-      </div>
-      </div>
-    </>
-  );
+    );
 };
 
 const ResumePage: React.FC = () => {
