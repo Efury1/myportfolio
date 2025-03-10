@@ -49,12 +49,6 @@ const Navbar: React.FC = () => {
                         Home
                     </Link>
                     <Link
-                        href="/RSS"
-                        className="windows-button text-black hover:text-white font-semibold tracking-wide px-4 py-2 rounded-md"
-                    >
-                        Youtube
-                    </Link>
-                    <Link
                         href="/Projects"
                         className="windows-button text-black hover:text-white font-semibold tracking-wide px-4 py-2 rounded-md"
                     >
@@ -87,12 +81,6 @@ const Navbar: React.FC = () => {
                             className="windows-button block text-black hover:text-white font-semibold tracking-wide px-4 py-2 rounded-md"
                         >
                             Home
-                        </Link>
-                        <Link
-                            href="/RSS"
-                            className="windows-button block text-black hover:text-white font-semibold tracking-wide px-4 py-2 rounded-md"
-                        >
-                            Youtube
                         </Link>
                         <Link
                             href="/Projects"
