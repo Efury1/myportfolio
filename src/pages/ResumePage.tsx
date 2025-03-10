@@ -5,28 +5,25 @@ import profilePic from "./eliza1.png";
 import Navbar from "@/components/Navbar";
 
 interface Role {
-  title: string;
-  company: string;
-  location: string;
-  years: string;
-  description: string;
-  skills: string;
-  keyAchievement?: string;
-}
-
-interface ResumeProfileProps {
-  data: {
-    name: string;
     title: string;
     company: string;
     location: string;
     years: string;
     description: string;
     skills: string;
-    photo: StaticImageData | string;
-    roles: Role[];
-  };
+    keyAchievement?: string;
 }
+
+interface ResumeProfileProps {
+    data: {
+        name: string;
+        title: string;
+        skills: string;
+        photo: StaticImageData | string;
+        roles: Role[];
+    };
+}
+
 
 const resumeData = {
     name: "Eliza Fury",
@@ -175,7 +172,7 @@ const Resume: React.FC<ResumeProfileProps> = ({ data }) => {
             </div>
 
             <div className="p-6 text-gray-800">
-           
+
                 {/* Roles Section */}
                 <div className="mt-10">
                     <div
@@ -223,14 +220,14 @@ const Resume: React.FC<ResumeProfileProps> = ({ data }) => {
 };
 
 const ResumePage: React.FC = () => {
-  return (
-    <div className="min-h-screen bg-gray-200">
-      <Navbar />
-      <div className="mt-10 px-4">
-        <Resume data={resumeData} />
-      </div>
-    </div>
-  );
+    return (
+        <div className="min-h-screen bg-gray-200">
+            <Navbar />
+            <div className="mt-10 px-4">
+                <Resume data={resumeData} />
+            </div>
+        </div>
+    );
 };
 
 export default ResumePage;

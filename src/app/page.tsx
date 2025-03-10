@@ -4,6 +4,10 @@ import { FaGithubAlt, FaMedium } from 'react-icons/fa';
 import '../styles/globals.css';
 import * as React from 'react';
 import Head from 'next/head';
+import { faFolder } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import Link from 'next/link';
+
 
 interface ProfileData {
     leftColumn: {
@@ -54,13 +58,14 @@ const ProfileLayout: React.FC<ProfileLayoutProps> = ({ profileData }) => {
         <>
             <Head>
                 <title>Eliza Fury - Full Stack Developer | UK</title>
-                <meta name="description" content="Eliza Fury is an Australian Full Stack Developer now based in the UK. With expertise in React, C#, TypeScript, JavaScript, and accessibility, Eliza is seeking new opportunities in the tech field." />
+                <meta name="description" content="Eliza Fury is an Australian Full Stack Developer now based in the UK." />
                 <meta name="robots" content="index, follow" />
                 <meta property="og:type" content="website" />
                 <meta property="og:title" content="Eliza Fury - Full Stack Developer | UK" />
-                <meta property="og:description" content="Explore Eliza Fury's professional experience and contact information. Based in the UK, Eliza specializes in both frontend and backend technologies." />
                 <meta property="og:image" content={profileData.leftColumn.imageSrc} />
+                <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
             </Head>
+
 
             <div className="font-mono min-h-screen">
                 <div className="max-w-6xl mx-auto p-5 grid grid-cols-1 md:grid-cols-3 gap-4">
@@ -81,16 +86,28 @@ const ProfileLayout: React.FC<ProfileLayoutProps> = ({ profileData }) => {
                     <div className="bg-white border border-black rounded-none p-4 flex flex-col items-center" role="region" aria-labelledby="center-column">
                         <h2 className="text-lg font-bold">{profileData.centerColumn.title}</h2>
                         <p className="text-sm" dangerouslySetInnerHTML={{ __html: profileData.centerColumn.bio }} />
-                    </div>
-
-                    {/* Right Column */}
-                    <div className="bg-white border border-black rounded-none p-4 flex flex-col items-center" role="region" aria-labelledby="right-column">
                         <h3 className="text-lg font-bold">{profileData.rightColumn.title}</h3>
                         <div
                             className="text-sm"
                             dangerouslySetInnerHTML={{ __html: profileData.rightColumn.details }}
                         />
                     </div>
+
+                    {/* Right Column */}
+                    <div className="bg-white border border-black rounded-none p-4 flex flex-col items-center" role="region" aria-labelledby="right-column">
+                        <div className="bg-white border border-black rounded-lg p-4 flex flex-col items-center w-32 shadow-lg" role="region" aria-labelledby="right-column">
+                            {/* Folder Icon */}
+                            <FontAwesomeIcon icon={faFolder} size="sm" />
+                            {/* Link underneath */}
+                            <Link href="/UniversityAssignments" className="text-blue-500 text-xs mt-2 hover:underline">
+                                University Assignments
+                            </Link>
+
+                        </div>
+                    </div>
+
+
+
                 </div>
             </div>
         </>
