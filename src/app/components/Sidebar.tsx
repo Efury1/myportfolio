@@ -44,14 +44,15 @@ export function Sidebar({
   const grouped = groupPostsByCategory(posts);
 
   return (
-    <div
+    <nav
+      aria-label="Post categories"
       style={{
         width: 220,
         flexShrink: 0,
-        borderRight: "1px solid #E4E2DC",
+        borderRight: "1px solid #B0B0B0",
         padding: "20px 14px",
         boxSizing: "border-box",
-        background: "#F1EFE9",
+        background: "#ECECEC",
         overflowWrap: "break-word",
         wordBreak: "break-word",
       }}
@@ -60,42 +61,58 @@ export function Sidebar({
         style={{
           fontSize: 13,
           letterSpacing: 0.3,
-          color: "#8A8780",
+          color: "#595959",
           marginBottom: 14,
         }}
       >
-          Log of Milestones
+        Log of Milestones
       </div>
 
       {loading && (
-        <div style={{ fontSize: 14, color: "#8A8780" }}>Loading...</div>
+        <div
+          role="status"
+          aria-live="polite"
+          style={{ fontSize: 14, color: "#595959" }}
+        >
+          Loading...
+        </div>
       )}
 
-      {!loading &&
-        grouped.map(({ category, posts: groupPosts }) => (
-          <div key={category} style={{ marginBottom: 18 }}>
-            <div
-              style={{
-                fontSize: 11,
-                fontWeight: 600,
-                letterSpacing: 0.5,
-                textTransform: "uppercase",
-                color: "#B0AEA6",
-                marginBottom: 8,
-              }}
-            >
-              {category}
-            </div>
-            {groupPosts.map((post) => (
-              <PostListItem
-                key={post.slug}
-                post={post}
-                active={post.slug === selectedSlug}
-                onClick={() => onSelect(post.slug)}
-              />
-            ))}
-          </div>
-        ))}
-    </div>
+      {!loading && (
+        <ul style={{ listStyle: "none", margin: 0, padding: 0 }}>
+          {grouped.map(({ category, posts: groupPosts }) => (
+            <li key={category} style={{ marginBottom: 18 }}>
+              <div
+                id={`category-${category}`}
+                style={{
+                  fontSize: 11,
+                  fontWeight: 600,
+                  letterSpacing: 0.5,
+                  textTransform: "uppercase",
+                  color: "#595959",
+                  marginBottom: 8,
+                }}
+              >
+                {category}
+              </div>
+              <ul
+                aria-labelledby={`category-${category}`}
+                style={{ listStyle: "none", margin: 0, padding: 0 }}
+              >
+                {groupPosts.map((post) => (
+                  <li key={post.slug}>
+                    <PostListItem
+                      post={post}
+                      active={post.slug === selectedSlug}
+                      onClick={() => onSelect(post.slug)}
+                    />
+                  </li>
+                ))}
+              </ul>
+            </li>
+          ))}
+        </ul>
+      )}
+    </nav>
   );
 }

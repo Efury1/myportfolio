@@ -1,5 +1,3 @@
-# Women's Health Hackathon: IUD Pain Survey Analysis
-
 *This project is for research and educational purposes. Created for the Databricks Health Challenge.*
 
 **Repo:** [github.com/Efury1/Women-s-Health-Hackathon](https://github.com/Efury1/Women-s-Health-Hackathon)

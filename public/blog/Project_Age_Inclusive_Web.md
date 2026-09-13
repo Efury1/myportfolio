@@ -1,11 +1,9 @@
-# The Age-Inclusive Web Standard (AIWS)
-
 **Repo:** [github.com/Efury1/Age-Inclusive-Web](https://github.com/Efury1/Age-Inclusive-Web)
 **Site:** [ageinclusiveweb.netlify.app](https://ageinclusiveweb.netlify.app)
 
 ## What it is
 
-An open-source accessibility standard for designing digital public services that actually work for older adults. It grew out of a Socitm workshop on older adults in Norfolk, UK, and is built by Team Elevate, a cross-council group: Eliza (Norfolk County Council), Bethany Lloyd (London Borough of Barnet), Emma Toublic (Essex County Council), Holly Plumb (Norfolk County Council), and Hoda Younis (London Borough of Hounslow).
+An open-source accessibility standard for designing digital public services that actually work for older adults. It grew out of a Socitm workshop on older adults in Norfolk, UK, and is built by Team Elevate, a cross-council group: Bethany Lloyd (London Borough of Barnet), Emma Toublic (Essex County Council), Holly Plumb (Norfolk County Council), and Hoda Younis (London Borough of Hounslow).
 
 The audience is public sector and council teams. The goal is guidance that's evidence-grounded and actually actionable, not just a checklist to tick off, and a site that models its own principles rather than just describing them.
 

@@ -36,8 +36,10 @@ const resumeData = {
             location: "Norwich, UK",
             years: "Present",
             description:
-                "",
+                "• Modernised legacy CSS by refactoring stylesheets into the Sass 7-1 architecture, improving scalability, maintainability, and modularity of the codebase.\n• Built a GitHub Actions CI pipeline to automate Sass migration tooling.\n• Implemented automated README reporting for failed migrations, improving visibility and debugging efficiency across the team.\n• Worked extensively with vanilla JavaScript (ES6+) to support frontend functionality and tooling integrations.\n• Collaborated on Git branching strategies and release workflows, improving merge processes and deployment reliability.\n• Contributed to establishing frontend best practices through code reviews and pull requests, increasing overall team code quality.\n• Worked with the GOSS content management system, including debugging Handlebars templates.\n• Set up Jest testing for frontend components such as buttons, strengthening test coverage across the codebase.\n• Used Windows Narrator and NVDA to carry out accessibility checks.\n• Served as a Norfolk County Council Ambassador, supporting engagement and representing the organisation in community and team initiatives.",
             skills: "SASS · Github Actions · JavaScript · W3C Accessibility · Age Inclusive Design",
+            keyAchievement:
+                "Built the Age-Inclusive Web Standard, a framework to make it easier for older adults to use the web.",
         },
         {
             title: "Full Stack Developer",
@@ -208,7 +210,7 @@ const Resume: React.FC<ResumeProfileProps> = ({ data }) => {
 
 const ResumePage: React.FC = () => {
     return (
-        <div className="min-h-screen bg-white flex flex-col">
+        <div className="min-h-screen bg-white flex flex-col pb-32">
             <div className="mt-10 px-4">
                 <Resume data={resumeData} />
             </div>
