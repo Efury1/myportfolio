@@ -13,12 +13,6 @@ const favicon = (domain: string) =>
 
 const interests: Interest[] = [
   {
-    label: "Early Internet Culture",
-    img: "https://picsum.photos/seed/earlyweb/64/64",
-    description: "The look and feel of the web before it got polished and corporate.",
-    rotate: -3,
-  },
-  {
     label: "Web Design Museum, 1995–1997",
     img: favicon("webdesignmuseum.org"),
     description: "An archive of screenshots and videos of websites from the early web.",
@@ -88,10 +82,18 @@ const interests: Interest[] = [
     rotate: 5,
   },
   {
-    label: "Old Tech Toys",
-    img: "https://picsum.photos/seed/pixelchix/64/64",
-    description: "Early-2000s electronic toys, like Pixel Chix, that feel like tiny artifacts of their era.",
+    label: "Old Computers",
+    img: favicon("oldcomputers.net"),
+    description: "A museum of vintage computers, with photos and specs for each machine.",
+    url: "https://oldcomputers.net/",
     rotate: -3,
+  },
+  {
+    label: "Textfiles Directory",
+    img: favicon("textfiles.com"),
+    description: "A sprawling archive of old text files, BBS documents, and internet ephemera.",
+    url: "http://textfiles.com/directory.html",
+    rotate: 3,
   },
 ];
 
