@@ -102,8 +102,8 @@ export default function InterestsFlow() {
         {interests.map((item, i) => (
           <span key={item.label} className="inline-flex items-center gap-2">
             {item.url ? (
-              <a
-                href={item.url}
+              
+              <a  href={item.url}
                 target="_blank"
                 rel="noreferrer"
                 title={item.description}
@@ -130,10 +130,10 @@ export default function InterestsFlow() {
 
       <footer className="mt-16 border-t border-neutral-400 px-6 py-8 text-center">
         <p className="text-base italic tracking-wide text-black">
-          things i'm into
+          things i&apos;m into
         </p>
         <p className="mt-1 text-base italic tracking-wide text-black">
-          i'm passionate about creative coding and people exploring design and themselves through the internet
+          i&apos;m passionate about creative coding and people exploring design and themselves through the internet
         </p>
       </footer>
     </div>
