@@ -1,140 +1,192 @@
-import Image from 'next/image';
-import { AiFillLinkedin, AiFillYoutube } from 'react-icons/ai';
-import { FaGithubAlt, FaMedium } from 'react-icons/fa';
-import '../styles/globals.css';
-import * as React from 'react';
-import Head from 'next/head';
-import { faFolder } from '@fortawesome/free-solid-svg-icons';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import Link from 'next/link';
-
+import Image from "next/image";
+import * as React from "react";
+import { faFolder } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import Link from "next/link";
+import RetroWindow from "@/app/components/RetroWindow";
+import Eliza3 from "./Eliza2.jpg";
+import {
+  faMedium,
+  faYoutube,
+  faJs,
+  faReact,
+} from "@fortawesome/free-brands-svg-icons";
+import MediumFeed from "@/app/components/MediumFeed";
+import BlogPage from "@/pages/BlogPage";
 
 interface ProfileData {
-    leftColumn: {
-        imageSrc: string;
-        name: string;
-        bio: string;
-    };
-    centerColumn: {
-        title: string;
-        bio: string;
-    };
-    rightColumn: {
-        title: string;
-        details: string;
-    };
+  name: string;
 }
 
 interface ProfileLayoutProps {
-    profileData: ProfileData;
-}
-
-interface ProfileInfoProps {
-    name: string;
-    bio: string;
+  profileData: ProfileData;
 }
 
 const exampleProfileData: ProfileData = {
-    leftColumn: {
-        imageSrc: require('./eliza1.png'),
-        name: 'Eliza Fury',
-        bio: `I am a passionate Australian <span style="color: #3b82f6;">Full Stack Developer</span> currently living in the UK. I am still adjusting to the weather. But I am excited about the many opportunities to explore here.
-        I graduated from Queensland University of Technology with a Bachelor's degree in <span style="color: #3b82f6;">Computer Science</span> and a Graduate Certificate in <span style="color: #3b82f6;">Data Analytics</span>. 
-        My university studies also included design-based minors. Which is why I believe we have this beautiful website. I am currently seeking new opportunities
-        in the UK. So please feel free to reach out and get in touch.`,
-    },
-    centerColumn: {
-        title: 'Experience',
-        bio: 'With over two years of experience as a developer, I have worked on both frontend and backend development. My expertise includes <span style="color: #3b82f6;">React</span>, <span style="color: #3b82f6;">TypeScript</span>, <span style="color: #3b82f6;">JavaScript</span>, as well as backend technologies like <span style="color: #3b82f6;">C#</span> and <span style="color: #3b82f6;">Knockout</span>. I have also worked with migrations and <span style="color: #3b82f6;">SQL</span>. Additionally, I have specialized in <span style="color: #3b82f6;">accessibility</span>, where I used JAWS to help individuals better access websites.',
-    },
-    rightColumn: {
-        title: 'Contact Information',
-        details: 'Email: ejfury@protonmail.com<br>LinkedIn: https://www.linkedin.com/in/eliza-fury-3004b3110/',
-    },
+  name: "Eliza Fury",
 };
 
 const ProfileLayout: React.FC<ProfileLayoutProps> = ({ profileData }) => {
-    return (
-        <>
-            <Head>
-                <title>Eliza Fury - Full Stack Developer | UK</title>
-                <meta name="description" content="Eliza Fury is an Australian Full Stack Developer now based in the UK." />
-                <meta name="robots" content="index, follow" />
-                <meta property="og:type" content="website" />
-                <meta property="og:title" content="Eliza Fury - Full Stack Developer | UK" />
-                <meta property="og:image" content={profileData.leftColumn.imageSrc} />
-                <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
-            </Head>
+  return (
+    <main className="min-h-screen bg-white p-7">
+      <div className="mx-auto flex max-w-5xl flex-col gap-10 md:flex-row">
+        {/* LEFT COLUMN */}
+        <div className="flex0">
+          <h2 className="mb-2 inline-block bg-black px-4 py-2 font-[family-name:var(--font-pixel)] text-5xl leading-tight text-white">
+            About
+            <br />
+            me!
+          </h2>
 
+          <p className="mb-5 max-w-md text-sm leading-6">
+            I am a passionate{" "}
+            <span className="font-semibold text-blue-499">
+              Full Stack Developer
+            </span>{" "}
+            located in the UK. My speciality is accessibility, which includes
+            age-inclusive web design.
+          </p>
 
-            <div className="font-mono min-h-screen">
-                <div className="max-w-6xl mx-auto p-5 grid grid-cols-1 md:grid-cols-3 gap-4">
-                    {/* Left Column */}
-                    <div className="bg-white border border-black rounded-none p-4 flex flex-col items-center" role="region" aria-labelledby="left-column">
-                        <Image
-                            src={profileData.leftColumn.imageSrc}
-                            alt={`Profile picture of ${profileData.leftColumn.name}`}
-                            width={200}
-                            height={200}
-                            className="rounded-full"
-                            aria-describedby="profile-image-description"
-                        />
-                        <ProfileInfo name={profileData.leftColumn.name} bio={profileData.leftColumn.bio} />
-                    </div>
+          {/* FOLDERS */}
+          <div className="mb-5 flex gap-4">
+            <div
+              className="mb-5 flex w-20 flex-col items-center rounded-sm border border-black bg-white p-2 shadow-md"
+              role="region"
+            >
+              <FontAwesomeIcon icon={faFolder} size="sm" />
 
-                    {/* Center Column */}
-                    <div className="bg-white border border-black rounded-none p-4 flex flex-col items-center" role="region" aria-labelledby="center-column">
-                        <h2 className="text-lg font-bold">{profileData.centerColumn.title}</h2>
-                        <p className="text-sm" dangerouslySetInnerHTML={{ __html: profileData.centerColumn.bio }} />
-                        <h3 className="text-lg font-bold">{profileData.rightColumn.title}</h3>
-                        <div
-                            className="text-sm"
-                            dangerouslySetInnerHTML={{ __html: profileData.rightColumn.details }}
-                        />
-                    </div>
-
-                    {/* Right Column */}
-                    <div className="bg-white border border-black rounded-none p-4 flex flex-col items-center" role="region" aria-labelledby="right-column">
-                        <div className="bg-white border border-black rounded-lg p-4 flex flex-col items-center w-32 shadow-lg" role="region" aria-labelledby="right-column">
-                            {/* Folder Icon */}
-                            <FontAwesomeIcon icon={faFolder} size="sm" />
-                            {/* Link underneath */}
-                            <Link href="/UniversityAssignments" className="text-blue-500 text-xs mt-2 hover:underline">
-                                University Assignments
-                            </Link>
-
-                        </div>
-                    </div>
-
-
-
-                </div>
+              <Link
+                href="/UniversityAssignments"
+                className="mt-1 text-xs text-blue-500 hover:underline"
+              >
+                Course Work
+              </Link>
             </div>
-        </>
-    );
+
+            <div
+              className="mb-5 flex w-20 flex-col items-center rounded-sm border border-black bg-white p-2 shadow-md"
+              role="region"
+            >
+              <FontAwesomeIcon icon={faFolder} size="sm" />
+
+              <Link
+                href="/BlogPage"
+                className="mt-1 text-xs text-blue-500 hover:underline"
+              >
+                Log
+              </Link>
+            </div>
+          </div>
+
+          {/* SKILLS */}
+          <h4 className="mb-2 text-xl font-bold underline">SKILLS</h4>
+
+          <div className="mb-5 flex flex-wrap gap-2">
+            <span className="flex items-center gap0 rounded-full border border-black px-3 py-1 text-xs font-bold text-black">
+              <FontAwesomeIcon icon={faJs} />
+              JavaScript
+            </span>
+
+            <span className="flex items-center gap0 rounded-full border border-black px-3 py-1 text-xs font-bold text-black">
+              <FontAwesomeIcon icon={faReact} />
+              React
+            </span>
+
+            <span className="rounded-full border border-black bg-purple-499 px-3 py-1 text-xs font-bold text-black">
+              C#
+            </span>
+
+            <span className="rounded-full border border-black bg-blue-699 px-3 py-1 text-xs font-bold text-black">
+              TS
+            </span>
+          </div>
+
+          {/* EDUCATION */}
+          <h4 className="mb-2 text-xl font-bold underline">EDUCATION</h4>
+
+          <div className="mb-5 space-y-4 text-sm">
+            <p>
+              <strong>Present</strong>
+              <br />
+              Diploma in History and Philosophy of Science and Technology
+              (Cambridge)
+            </p>
+
+            <p>
+              <strong>Jul 2023 - Dec 2024</strong>
+              <br />
+              Graduate Certificate in Data Analytics (Queensland University of
+              Technology)
+            </p>
+
+            <p>
+              <strong>2019 - 2021</strong>
+              <br />
+              Bachelors in Computer Science and Industrial Design (Queensland
+              University of Technology)
+            </p>
+          </div>
+        </div>
+
+        {/* RIGHT COLUMN */}
+        <div className="flex w-full flex-col gap-5 md:flex-1">
+          {/* PROFILE WINDOW */}
+          <RetroWindow title="Meet-Eliza" color="#81">
+            <Image
+              src={Eliza3}
+              alt="Eliza Fury"
+              width={501}
+              height={501}
+              className="h-auto w-full object-cover"
+              priority
+            />
+          </RetroWindow>
+
+          {/* SOCIALS WINDOW */}
+          <RetroWindow
+            title="My Socials"
+            color="#81"
+            className="-ml-9 -mt-20 relative z-10 self-start shadow-xl"
+          >
+            <div className="space-y-2 text-sm">
+              <p className="flex items-center gap-1">
+                <FontAwesomeIcon icon={faMedium} />
+
+                <a
+                  href="https://medium.com/@coderchic"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:underline"
+                >
+                  @coderchic
+                </a>
+              </p>
+
+              <p className="flex items-center gap-1">
+                <FontAwesomeIcon icon={faYoutube} />
+
+                <a
+                  href="https://www.youtube.com/@CoderChic"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:underline"
+                >
+                  @coderchic
+                </a>
+              </p>
+            </div>
+          </RetroWindow>
+
+          {/* MEDIUM FEED */}
+          <MediumFeed />
+        </div>
+      </div>
+    </main>
+  );
 };
 
-const ProfileInfo: React.FC<ProfileInfoProps> = ({ name, bio }) => (
-    <div className="text-center mt-4" role="region" aria-labelledby="profile-info">
-        <h2 className="text-lg font-bold mb-2">About Me</h2>
-        <p className="text-sm">
-            <strong>{name}</strong>
-            <br />
-            <span dangerouslySetInnerHTML={{ __html: bio }} />
-        </p>
-        <h3 className="text-sm font-bold mt-4">Favourite Tech Products and Sites</h3>
-        <p className="text-sm">
-            <span style={{ color: '#3b82f6' }}>Pixel Chix</span>, <span style={{ color: '#3b82f6' }}>The Internet Archive</span>, <span style={{ color: '#3b82f6' }}>WebSliders</span>
-        </p>
-    </div>
-);
-
 const App: React.FC = () => {
-    return (
-        <div>
-            <ProfileLayout profileData={exampleProfileData} />
-        </div>
-    );
+  return <ProfileLayout profileData={exampleProfileData} />;
 };
 
 export default App;

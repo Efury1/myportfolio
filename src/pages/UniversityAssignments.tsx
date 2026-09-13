@@ -1,10 +1,9 @@
 import React from 'react';
-import Navbar from "@/components/Navbar";
+import Navbar from "@/app/components/Navbar";
 
 const UniversityAssignments: React.FC = () => {
     return (
         <>
-            <Navbar />
             <div className="bg-blue-300 min-h-screen flex justify-center items-center">
                 <div className="bg-gray-200 w-96 shadow-lg rounded-md">
                     <div className="bg-blue-500 text-white p-2 flex justify-between items-center rounded-t-md">

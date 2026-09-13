@@ -1,0 +1,472 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+/* =========================================================
+   WINDOWS 98 GLOBAL THEME
+   ========================================================= */
+
+:root {
+  --win98-desktop: #008080;
+
+  --win98-gray: #c0c0c0;
+  --win98-light: #ffffff;
+  --win98-light-gray: #dfdfdf;
+  --win98-mid-gray: #808080;
+  --win98-dark: #404040;
+  --win98-black: #000000;
+
+  --win98-blue: #000080;
+  --win98-blue-light: #1084d0;
+
+  --win98-highlight: #000080;
+  --win98-highlight-text: #ffffff;
+
+  /* darker than mid-gray so white text on it clears 4.5:1 contrast */
+  --win98-titlebar-inactive: #595959;
+
+  /* darker red than pure #ff0000, clears 4.5:1 on white */
+  --win98-link-active: #b30000;
+
+  --font-sans: "MS Sans Serif", Tahoma, Arial, sans-serif;
+  --font-serif: "Times New Roman", serif;
+  --font-mono: "Courier New", monospace;
+}
+
+
+/* =========================================================
+   BASE
+   ========================================================= */
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  min-height: 100%;
+}
+
+body {
+  background: var(--win98-desktop);
+  color: var(--win98-black);
+
+  font-family: "MS Sans Serif", Tahoma, Arial, sans-serif;
+  font-size: 13px;
+
+  image-rendering: auto;
+}
+
+
+/* =========================================================
+   LINKS
+   ========================================================= */
+
+a {
+  color: #0000ee;
+  text-decoration: underline;
+}
+
+a:visited {
+  color: #551a8b;
+}
+
+a:hover {
+  color: #0000ff;
+}
+
+a:active {
+  color: var(--win98-link-active);
+}
+
+a:focus-visible {
+  outline: 2px solid var(--win98-black);
+  outline-offset: 1px;
+}
+
+
+/* =========================================================
+   WINDOWS 98 BUTTON
+   ========================================================= */
+
+button,
+.windows-button,
+.sunken-button {
+  appearance: none;
+
+  background: var(--win98-gray);
+  color: var(--win98-black) !important;
+
+  font-family: "MS Sans Serif", Tahoma, Arial, sans-serif;
+  font-size: 13px;
+  font-weight: normal;
+
+  padding: 3px 12px;
+
+  min-height: 23px;
+  /* meets the 24px minimum target size for pointer input */
+  min-width: 24px;
+
+  border: 1px solid var(--win98-black);
+
+  border-top-color: var(--win98-light);
+  border-left-color: var(--win98-light);
+  border-right-color: var(--win98-dark);
+  border-bottom-color: var(--win98-dark);
+
+  border-radius: 0;
+
+  box-shadow:
+    inset 1px 1px 0 var(--win98-light-gray),
+    inset -1px -1px 0 var(--win98-mid-gray);
+
+  cursor: default;
+}
+
+button:hover,
+.windows-button:hover,
+.sunken-button:hover {
+  background: var(--win98-gray);
+}
+
+button:active,
+.windows-button:active,
+.sunken-button:active {
+  border-top-color: var(--win98-dark);
+  border-left-color: var(--win98-dark);
+  border-right-color: var(--win98-light);
+  border-bottom-color: var(--win98-light);
+
+  box-shadow:
+    inset 1px 1px 0 var(--win98-mid-gray);
+
+  padding-top: 4px;
+  padding-left: 13px;
+  padding-bottom: 2px;
+}
+
+/* visible keyboard focus, not just a color change */
+button:focus-visible,
+.windows-button:focus-visible,
+.sunken-button:focus-visible {
+  outline: 2px dotted var(--win98-black);
+  outline-offset: 2px;
+}
+
+
+/* =========================================================
+   WINDOWS 98 TEXT INPUTS
+   ========================================================= */
+
+input,
+textarea,
+select {
+  background: #ffffff;
+  color: var(--win98-black);
+
+  font-family: "MS Sans Serif", Tahoma, Arial, sans-serif;
+  font-size: 13px;
+
+  border: 2px inset var(--win98-gray);
+  border-radius: 0;
+
+  padding: 3px;
+}
+
+/* was outline: none, that hid the focus ring for keyboard users */
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+  outline: 2px solid var(--win98-blue);
+  outline-offset: 1px;
+}
+
+
+/* =========================================================
+   WINDOWS 98 WINDOW
+   ========================================================= */
+
+.win98-window {
+  background: var(--win98-gray);
+
+  border: 2px solid;
+
+  border-top-color: var(--win98-light);
+  border-left-color: var(--win98-light);
+  border-right-color: var(--win98-black);
+  border-bottom-color: var(--win98-black);
+
+  box-shadow:
+    1px 1px 0 var(--win98-dark),
+    inset 1px 1px 0 var(--win98-light-gray);
+
+  padding: 2px;
+}
+
+
+/* =========================================================
+   WINDOWS 98 TITLE BAR
+   ========================================================= */
+
+.win98-titlebar {
+  display: flex;
+  align-items: center;
+
+  min-height: 20px;
+
+  padding: 2px 3px;
+
+  background: var(--win98-blue);
+
+  color: #ffffff;
+
+  font-family: "MS Sans Serif", Tahoma, Arial, sans-serif;
+  font-size: 13px;
+  font-weight: bold;
+
+  user-select: none;
+}
+
+/* darker gray so white text still clears 4.5:1 at 13px bold */
+.win98-titlebar.inactive {
+  background: var(--win98-titlebar-inactive);
+}
+
+
+/* =========================================================
+   WINDOWS 98 TITLE
+   ========================================================= */
+
+.win98-title {
+  flex: 1;
+
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+
+/* =========================================================
+   WINDOWS 98 WINDOW CONTROLS
+   ========================================================= */
+
+.win98-controls {
+  display: flex;
+  gap: 2px;
+  margin-left: 4px;
+}
+
+.win98-control {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 16px;
+  height: 14px;
+
+  padding: 0;
+
+  background: var(--win98-gray);
+  color: var(--win98-black);
+
+  font-family: Arial, sans-serif;
+  font-size: 10px;
+  font-weight: bold;
+  line-height: 1;
+
+  border: 1px solid;
+
+  border-top-color: var(--win98-light);
+  border-left-color: var(--win98-light);
+  border-right-color: var(--win98-black);
+  border-bottom-color: var(--win98-black);
+
+  box-shadow:
+    inset 1px 1px 0 var(--win98-light-gray);
+
+  border-radius: 0;
+}
+
+/* the button stays 16x14px to match the look, but the clickable
+   area is padded out to 24x24px with an invisible pseudo-element,
+   so touch and pointer users still get a usable target */
+.win98-control::before {
+  content: "";
+  position: absolute;
+  inset: -5px -4px;
+}
+
+.win98-control:active {
+  border-top-color: var(--win98-black);
+  border-left-color: var(--win98-black);
+  border-right-color: var(--win98-light);
+  border-bottom-color: var(--win98-light);
+
+  box-shadow: none;
+}
+
+.win98-control:focus-visible {
+  outline: 2px solid var(--win98-black);
+  outline-offset: 2px;
+}
+
+
+/* =========================================================
+   WINDOWS 98 WINDOW CONTENT
+   ========================================================= */
+
+.win98-content {
+  background: var(--win98-gray);
+  color: var(--win98-black);
+
+  padding: 8px;
+}
+
+
+/* =========================================================
+   WINDOWS 98 SUNKEN PANEL
+   ========================================================= */
+
+.win98-sunken {
+  background: #ffffff;
+
+  border: 2px inset var(--win98-gray);
+
+  padding: 6px;
+}
+
+
+/* =========================================================
+   WINDOWS 98 RAISED PANEL
+   ========================================================= */
+
+.win98-raised {
+  background: var(--win98-gray);
+
+  border: 2px outset var(--win98-gray);
+
+  padding: 6px;
+}
+
+
+/* =========================================================
+   WINDOWS 98 DESKTOP
+   ========================================================= */
+
+.win98-desktop {
+  min-height: 100vh;
+  background: var(--win98-desktop);
+}
+
+
+/* =========================================================
+   WINDOWS 98 FOLDER / ICON
+   ========================================================= */
+
+.win98-icon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  width: 72px;
+  /* meets minimum 24px target size, was implicit and small */
+  min-height: 24px;
+
+  padding: 4px;
+
+  background: transparent;
+
+  color: white;
+  /* keeps the label readable over any desktop background,
+     not just the teal default */
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.85);
+
+  font-family: "MS Sans Serif", Tahoma, Arial, sans-serif;
+  font-size: 11px;
+
+  text-align: center;
+
+  cursor: default;
+}
+
+.win98-icon:hover {
+  background: rgba(0, 0, 128, 0.5);
+}
+
+.win98-icon:focus-visible {
+  outline: 2px dotted white;
+  outline-offset: 2px;
+  background: rgba(0, 0, 128, 0.5);
+}
+
+
+/* =========================================================
+   WINDOWS 98 HORIZONTAL RULE
+   ========================================================= */
+
+hr {
+  border: 0;
+
+  border-top: 1px solid var(--win98-mid-gray);
+  border-bottom: 1px solid var(--win98-light);
+
+  height: 2px;
+}
+
+
+/* =========================================================
+   WINDOWS 98 SELECTION
+   ========================================================= */
+
+::selection {
+  background: var(--win98-highlight);
+  color: var(--win98-highlight-text);
+}
+
+
+/* =========================================================
+   ACCESSIBILITY
+   ========================================================= */
+
+:focus-visible {
+  outline: 1px dotted var(--win98-black);
+  outline-offset: -2px;
+}
+
+/* honors OS/browser high contrast mode instead of losing all
+   borders and backgrounds when custom colors get stripped out */
+@media (forced-colors: active) {
+  button,
+  .windows-button,
+  .sunken-button,
+  .win98-window,
+  .win98-control,
+  input,
+  textarea,
+  select {
+    forced-color-adjust: none;
+    border-color: ButtonText;
+    background: ButtonFace;
+    color: ButtonText;
+  }
+
+  a {
+    forced-color-adjust: none;
+    color: LinkText;
+  }
+
+  :focus-visible {
+    outline: 2px solid Highlight;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.001ms !important;
+    transition-duration: 0.001ms !important;
+  }
+}
